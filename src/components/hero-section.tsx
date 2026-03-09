@@ -1,10 +1,16 @@
 import Link from "next/link";
-import { ArrowRight, MapPin, Sparkles } from "lucide-react";
+import { ArrowRight, Github, Linkedin, Mail, MapPin, Sparkles } from "lucide-react";
 
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { getActivePersona, portfolioConfig } from "@/data/portfolio-config";
+
+const socialIcons = {
+  GitHub: Github,
+  LinkedIn: Linkedin,
+  Email: Mail
+} as const;
 
 export function HeroSection() {
   const persona = getActivePersona();
@@ -40,11 +46,22 @@ export function HeroSection() {
               <MapPin className="h-4 w-4" />
               {persona.location}
             </div>
-            {persona.socialLinks.map((social) => (
-              <Link key={social.label} href={social.href} target="_blank" rel="noreferrer" className="hover:text-foreground">
-                {social.label}
-              </Link>
-            ))}
+            {persona.socialLinks.map((social) => {
+              const Icon = socialIcons[social.label as keyof typeof socialIcons];
+
+              return (
+                <Link
+                  key={social.label}
+                  href={social.href}
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label={social.label}
+                  className="rounded-full border border-border/70 p-2 transition hover:border-primary/40 hover:text-foreground"
+                >
+                  <Icon className="h-4 w-4" />
+                </Link>
+              );
+            })}
           </div>
         </div>
 

@@ -1,0 +1,29 @@
+<svg width="1200" height="800" viewBox="0 0 1200 800" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="800" rx="40" fill="#06121B"/>
+  <rect x="36" y="36" width="1128" height="728" rx="32" fill="url(#bg)"/>
+  <circle cx="936" cy="194" r="152" fill="#14B8A6" fill-opacity="0.14"/>
+  <rect x="96" y="118" width="356" height="524" rx="28" fill="#071A2A" stroke="#2DD4BF" stroke-opacity="0.24"/>
+  <rect x="140" y="168" width="268" height="44" rx="22" fill="#F0FDFA" fill-opacity="0.9"/>
+  <rect x="140" y="244" width="186" height="18" rx="9" fill="#CCFBF1" fill-opacity="0.58"/>
+  <rect x="140" y="290" width="220" height="18" rx="9" fill="#CCFBF1" fill-opacity="0.4"/>
+  <rect x="140" y="372" width="220" height="220" rx="20" fill="#0F766E" fill-opacity="0.18"/>
+  <path d="M198 484H304" stroke="#99F6E4" stroke-width="18" stroke-linecap="round"/>
+  <path d="M251 431V537" stroke="#99F6E4" stroke-width="18" stroke-linecap="round"/>
+  <rect x="520" y="150" width="592" height="164" rx="28" fill="#082032"/>
+  <rect x="568" y="196" width="280" height="38" rx="19" fill="#ECFEFF" fill-opacity="0.9"/>
+  <path d="M569 270H985" stroke="#67E8F9" stroke-opacity="0.34" stroke-width="18" stroke-linecap="round"/>
+  <rect x="520" y="364" width="274" height="180" rx="28" fill="#0A2236"/>
+  <rect x="838" y="364" width="274" height="180" rx="28" fill="#0A2236"/>
+  <path d="M589 448H723" stroke="#2DD4BF" stroke-width="20" stroke-linecap="round"/>
+  <path d="M907 448H1041" stroke="#38BDF8" stroke-width="20" stroke-linecap="round"/>
+  <path d="M589 500H685" stroke="#A7F3D0" stroke-opacity="0.45" stroke-width="18" stroke-linecap="round"/>
+  <path d="M907 500H1003" stroke="#BAE6FD" stroke-opacity="0.45" stroke-width="18" stroke-linecap="round"/>
+  <text x="96" y="90" fill="#A7F3D0" font-size="28" font-family="Arial, sans-serif" letter-spacing="4">FINANCIO</text>
+  <text x="96" y="714" fill="white" font-size="64" font-family="Arial, sans-serif" font-weight="700">Feature Enhancements</text>
+  <defs>
+    <linearGradient id="bg" x1="84" y1="84" x2="1084" y2="710" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0F172A"/>
+      <stop offset="1" stop-color="#0F3B4D"/>
+    </linearGradient>
+  </defs>
+</svg>

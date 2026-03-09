@@ -1,0 +1,8 @@
+PortfolioNova Demo Resume
+
+Replace this file with your own PDF or resume asset.
+
+Suggested path:
+public/resume/your-name-resume.pdf
+
+Then update `resumeFile` in `src/data/portfolio-config.ts`.

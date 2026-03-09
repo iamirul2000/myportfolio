@@ -1,0 +1,25 @@
+<svg width="1200" height="800" viewBox="0 0 1200 800" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="800" rx="40" fill="#0A101C"/>
+  <rect x="36" y="36" width="1128" height="728" rx="32" fill="url(#bg)"/>
+  <circle cx="904" cy="176" r="140" fill="#A3E635" fill-opacity="0.12"/>
+  <rect x="94" y="124" width="1012" height="152" rx="28" fill="#101827" stroke="#A3E635" stroke-opacity="0.2"/>
+  <rect x="142" y="172" width="292" height="34" rx="17" fill="#F7FEE7" fill-opacity="0.92"/>
+  <path d="M142 234H536" stroke="#D9F99D" stroke-opacity="0.4" stroke-width="18" stroke-linecap="round"/>
+  <rect x="94" y="336" width="302" height="274" rx="28" fill="#13212C"/>
+  <rect x="448" y="336" width="302" height="274" rx="28" fill="#13212C"/>
+  <rect x="802" y="336" width="304" height="274" rx="28" fill="#13212C"/>
+  <path d="M156 392H334" stroke="#A3E635" stroke-width="22" stroke-linecap="round"/>
+  <path d="M510 392H688" stroke="#84CC16" stroke-width="22" stroke-linecap="round"/>
+  <path d="M864 392H1042" stroke="#65A30D" stroke-width="22" stroke-linecap="round"/>
+  <path d="M156 448H284" stroke="#D9F99D" stroke-opacity="0.46" stroke-width="18" stroke-linecap="round"/>
+  <path d="M510 448H638" stroke="#D9F99D" stroke-opacity="0.46" stroke-width="18" stroke-linecap="round"/>
+  <path d="M864 448H992" stroke="#D9F99D" stroke-opacity="0.46" stroke-width="18" stroke-linecap="round"/>
+  <text x="94" y="92" fill="#D9F99D" font-size="28" font-family="Arial, sans-serif" letter-spacing="4">THETA EDGE</text>
+  <text x="94" y="704" fill="white" font-size="64" font-family="Arial, sans-serif" font-weight="700">PigrimPro Workforce System</text>
+  <defs>
+    <linearGradient id="bg" x1="82" y1="70" x2="1102" y2="726" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#111827"/>
+      <stop offset="1" stop-color="#1E3A1B"/>
+    </linearGradient>
+  </defs>
+</svg>

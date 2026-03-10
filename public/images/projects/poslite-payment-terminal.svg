@@ -15,7 +15,7 @@
   <path d="M464 388H752" stroke="#FDE68A" stroke-opacity="0.28" stroke-width="18" stroke-linecap="round"/>
   <path d="M464 454H710" stroke="#FDE68A" stroke-opacity="0.22" stroke-width="18" stroke-linecap="round"/>
   <text x="114" y="96" fill="#FDE68A" font-size="28" font-family="Arial, sans-serif" letter-spacing="4">THETA EDGE</text>
-  <text x="114" y="716" fill="white" font-size="64" font-family="Arial, sans-serif" font-weight="700">POSLite Payment Terminal</text>
+  <text x="114" y="716" fill="white" font-size="64" font-family="Arial, sans-serif" font-weight="700">POSLite</text>
   <defs>
     <linearGradient id="bg" x1="88" y1="88" x2="1110" y2="728" gradientUnits="userSpaceOnUse">
       <stop stop-color="#111827"/>

@@ -52,7 +52,7 @@ export interface ProjectLink {
 export interface Project {
   title: string;
   slug: string;
-  category: ProjectCategory;
+  category: ProjectCategory | ProjectCategory[];
   description: string;
   techStack: string[];
   tags: string[];
@@ -132,7 +132,7 @@ const sharedProjects: Project[] = [
     description: "A modular analytics platform that turned complex operational data into fast, decision-ready reporting.",
     techStack: ["Next.js", "TypeScript", "Tailwind CSS", "PostgreSQL", "Framer Motion"],
     tags: ["Analytics", "B2B SaaS", "Data Viz"],
-    thumbnail: "/images/projects/financio-bugfix.svg",
+    thumbnail: "/images/projects/financio-product-support-and-enhancements-main.svg",
     gallery: ["/images/projects/pulseboard.svg", "/images/projects/pulseboard-detail.svg"],
     links: [
       { label: "Live Preview", href: "https://example.com" },
@@ -152,7 +152,7 @@ const sharedProjects: Project[] = [
     description: "A conversion-focused ecommerce redesign with premium merchandising blocks and a faster checkout funnel.",
     techStack: ["Next.js", "React", "Stripe", "Sanity", "Vercel"],
     tags: ["Ecommerce", "Checkout", "Performance"],
-    thumbnail: "/images/projects/financio-enhancements.svg",
+    thumbnail: "/images/projects/financio-product-support-and-enhancements-features.svg",
     gallery: ["/images/projects/cartwise.svg", "/images/projects/cartwise-detail.svg"],
     links: [
       { label: "Case Study", href: "/case-studies/cartwise-growth-system" }
@@ -171,7 +171,7 @@ const sharedProjects: Project[] = [
     description: "A wellness and habit platform with a calm visual system, guided onboarding, and progress-led UX.",
     techStack: ["React Native", "TypeScript", "Supabase", "Figma"],
     tags: ["Mobile", "Consumer", "Wellness"],
-    thumbnail: "/images/projects/financio-data-patch.svg",
+    thumbnail: "/images/projects/financio-product-support-and-enhancements-data.svg",
     gallery: ["/images/projects/northstar.svg", "/images/projects/northstar-detail.svg"],
     links: [
       { label: "App Store Concept", href: "https://example.com" }
@@ -271,98 +271,45 @@ const sharedCaseStudies: CaseStudy[] = [
 
 const developerProjects: Project[] = [
   {
-    title: "Financio Bug Fix Delivery",
-    slug: "financio-bug-fix-delivery",
+    title: "Financio",
+    slug: "financio",
     category: "Web App",
-    description: "Delivered production bug fixes across Financio to improve stability, usability, and issue resolution.",
-    techStack: ["JavaScript", "TypeScript", "React", "Web Applications", "Debugging"],
-    tags: ["Bug Fixing", "Product Support", "Maintenance"],
-    thumbnail: "/images/projects/financio-bugfix.svg",
-    gallery: ["/images/projects/financio-bugfix.svg"],
-    links: [{ label: "Resume", href: "/resume" }],
+    description: "Contributed to Financio through bug fixing, feature enhancements, and data patching for a live production product at ABSS.",
+    techStack: ["Angular", "MySQL", "Debugging", "Laravel", "PHP"],
+    tags: ["Bug Fixing", "Enhancements", "Data Patching"],
+    thumbnail: "/images/projects/financio-product-support-and-enhancements-main.svg",
+    gallery: ["/images/projects/financio-product-support-and-enhancements-main.svg", "/images/projects/financio-product-support-and-enhancements-features.svg", "/images/projects/financio-product-support-and-enhancements-data.svg"],
+    links: [
+      { label: "Resume", href: "/resume" },
+      { label: "LinkedIn", href: "https://www.linkedin.com/in/mirul-/" }
+    ],
     results: [
       "Resolved reported issues across existing product flows",
-      "Improved day-to-day product reliability for users and support teams",
-      "Delivered safe fixes inside an established production codebase"
+      "Delivered iterative enhancements within an active production codebase",
+      "Supported data correction and patching for operational continuity"
     ],
     overview:
       "At ABSS, I work on Financio as part of the ongoing engineering effort to keep the product stable, reliable, and easier to support.",
     challenge:
-      "Fixing issues in a live business product requires careful investigation, understanding of existing behavior, and safe changes that avoid regressions.",
+      "Supporting a live business product means balancing bug fixing, feature work, and data-sensitive changes without disrupting existing users or workflows.",
     solution:
-      "I trace reported issues, identify root causes, implement targeted fixes, and verify expected behavior before changes move forward.",
+      "I investigate reported issues, implement safe fixes, ship practical enhancements, and support data patching tasks with care for existing business rules and production behavior.",
     impact: [
-      "Reduced friction in existing workflows",
-      "Supported smoother internal operations",
+      "Improved product reliability and day-to-day usability",
+      "Kept delivery moving through targeted enhancements instead of large rewrites",
       "Helped maintain confidence in a production finance platform"
     ],
     featured: true
   },
   {
-    title: "Financio Feature Enhancements",
-    slug: "financio-feature-enhancements",
-    category: "SaaS",
-    description: "Implemented enhancements and iterative improvements for Financio based on product needs and existing workflows.",
-    techStack: ["Frontend Development", "Backend Support", "Feature Delivery", "Testing"],
-    tags: ["Enhancements", "Product Work", "Full Stack"],
-    thumbnail: "/images/projects/financio-enhancements.svg",
-    gallery: ["/images/projects/financio-enhancements.svg"],
-    links: [{ label: "Contact", href: "/contact" }],
-    results: [
-      "Delivered incremental product improvements",
-      "Balanced new behavior with legacy workflow expectations",
-      "Supported continuous refinement in an active codebase"
-    ],
-    overview:
-      "My work includes feature enhancements that extend or refine existing Financio functionality without disrupting current users.",
-    challenge:
-      "Enhancement work needs to fit established business logic, existing UI patterns, and real production data constraints.",
-    solution:
-      "I build changes incrementally, align them with the product's current architecture, and focus on practical improvements that are safe to release.",
-    impact: [
-      "Improved user workflows",
-      "Added value without large-scale rewrites",
-      "Helped keep product delivery moving forward"
-    ],
-    featured: true
-  },
-  {
-    title: "Financio Data Patching Support",
-    slug: "financio-data-patching-support",
-    category: "Dashboard",
-    description: "Handled data patching tasks to correct records, support operational needs, and keep product data aligned.",
-    techStack: ["SQL", "Data Patching", "Production Support", "Troubleshooting"],
-    tags: ["Data", "Support", "Operations"],
-    thumbnail: "/images/projects/financio-data-patch.svg",
-    gallery: ["/images/projects/financio-data-patch.svg"],
-    links: [{ label: "LinkedIn", href: "https://www.linkedin.com/in/mirul-/" }],
-    results: [
-      "Supported data correction and patching requests",
-      "Worked carefully around production-sensitive information",
-      "Connected engineering fixes with operational outcomes"
-    ],
-    overview:
-      "Alongside code changes, I also support data patching work where application behavior and stored data need to be brought back into sync.",
-    challenge:
-      "Data patching needs precision because even small updates can affect reporting, workflows, and downstream user experience.",
-    solution:
-      "I review the issue context, identify the required corrections, and apply focused patches with care for existing business rules.",
-    impact: [
-      "Improved data consistency",
-      "Supported operational continuity",
-      "Reduced manual follow-up on patch-related issues"
-    ],
-    featured: true
-  },
-  {
-    title: "PigrimPro Workforce System",
-    slug: "pigrimpro-workforce-system",
-    category: "Web App",
+    title: "PigrimPro",
+    slug: "pigrimpro",
+    category: ["Web App", "Mobile App"],
     description: "Built and optimized a Laravel-based web system with MySQL for company operations and data management.",
-    techStack: ["Laravel", "MySQL", "REST APIs", "Backend Development", "Frontend Integration"],
+    techStack: ["Laravel", "MySQL", "REST APIs", "Backend Development", "Frontend Integration", "Mobile Development - Android", "Stripe Integration", "PHP"],
     tags: ["Laravel", "Operations", "Web Development"],
-    thumbnail: "/images/projects/pigrimpro.svg",
-    gallery: ["/images/projects/pigrimpro.svg"],
+    thumbnail: "/images/projects/pigrimpro-workforce-system.svg",
+    gallery: ["/images/projects/pigrimpro-workforce-system.svg"],
     links: [{ label: "Contact", href: "/contact" }],
     results: [
       "Improved query performance and reduced redundancy through schema normalization",
@@ -379,17 +326,18 @@ const developerProjects: Project[] = [
       "Improved reliability through testing and debugging",
       "Reduced latency in important backend workflows",
       "Delivered a stronger foundation for day-to-day operations"
-    ]
+    ],
+    featured: true
   },
   {
-    title: "SakuPay iOS Maintenance",
-    slug: "sakupay-ios-maintenance",
+    title: "SakuPay",
+    slug: "sakupay",
     category: "Mobile App",
     description: "Maintained and updated an existing iOS app in Swift while improving compatibility, performance, and UI responsiveness.",
     techStack: ["Swift", "iOS", "Mobile Maintenance", "Debugging"],
     tags: ["iOS", "Maintenance", "Performance"],
-    thumbnail: "/images/projects/sakupay.svg",
-    gallery: ["/images/projects/sakupay.svg"],
+    thumbnail: "/images/projects/sakupay-ios-maintenance.svg",
+    gallery: ["/images/projects/sakupay-ios-maintenance.svg"],
     links: [{ label: "Contact", href: "/contact" }],
     results: [
       "Improved app compatibility with newer iOS versions and devices",
@@ -409,14 +357,14 @@ const developerProjects: Project[] = [
     ]
   },
   {
-    title: "POSLite Payment Terminal",
-    slug: "poslite-payment-terminal",
-    category: "Mobile App",
+    title: "POSLite",
+    slug: "poslite",
+    category: ["Mobile App", "Web App"],
     description: "Built features for a Flutter and Android payment terminal solution with authentication, payments, and real-time synchronization.",
-    techStack: ["Flutter", "Android Java", "Payment SDK", "UI Development", "API Integration"],
+    techStack: ["Flutter", "Android Java", "Payment SDK", "UI Development", "API Integration", "Laravel", "PHP", "Postman"],
     tags: ["Flutter", "Android", "Payments"],
-    thumbnail: "/images/projects/poslite.svg",
-    gallery: ["/images/projects/poslite.svg"],
+    thumbnail: "/images/projects/poslite-payment-terminal.svg",
+    gallery: ["/images/projects/poslite-payment-terminal.svg"],
     links: [{ label: "Contact", href: "/contact" }],
     results: [
       "Integrated APIs for authentication, payments, and real-time sync",
@@ -433,17 +381,18 @@ const developerProjects: Project[] = [
       "Improved usability across terminal and mobile flows",
       "Strengthened real-world testing and validation",
       "Built hands-on experience in payment integrations and security-focused workflows"
-    ]
+    ],
+    featured: true
   },
   {
-    title: "TrackerHero Backend Internship",
-    slug: "trackerhero-backend-internship",
+    title: "TrackerHero",
+    slug: "trackerhero",
     category: "Dashboard",
     description: "Supported backend delivery, code review, testing, and issue identification during an internship at TrackerHero.",
-    techStack: ["Backend Support", "Testing", "Code Review", "Client Communication"],
+    techStack: ["Backend Support", "Testing", "Laravel", "PHP", "Postman"],
     tags: ["Internship", "Backend", "QA"],
-    thumbnail: "/images/projects/trackerhero.svg",
-    gallery: ["/images/projects/trackerhero.svg"],
+    thumbnail: "/images/projects/trackerhero-backend-internship.svg",
+    gallery: ["/images/projects/trackerhero-backend-internship.svg"],
     links: [{ label: "Resume", href: "/resume" }],
     results: [
       "Supported developers with technical and quality-focused tasks",
@@ -502,7 +451,7 @@ export const portfolioConfig = {
   homepage: {
     showTestimonialsCarousel: true,
     showFaq: true,
-    featuredProjectsCount: 3
+    featuredProjectsCount: 5
   },
   personas: {
     designer: {
@@ -607,11 +556,12 @@ export const portfolioConfig = {
       tagline: "Full stack engineer with experience across web, mobile, APIs, and product maintenance, focused on reliable software and practical delivery.",
       availability: "Currently working at Asian Business Software Solutions (ABSS)",
       shortBio:
-        "Full stack web software engineer currently working on Financio at ABSS, with prior experience across Laravel, MySQL, REST APIs, iOS maintenance, Flutter, and payment terminal applications.",
+        "I am a Full Stack Web Software Engineer with experience supporting and enhancing live web and mobile products across business software environments.",
       longBio: [
-        "I currently work as a full stack web software engineer at Asian Business Software Solutions (ABSS), where I contribute to Financio through bug fixes, feature enhancements, and data patching on a live production product.",
-        "Before that, I worked at Theta Edge Berhad across web and mobile products including Laravel systems, iOS app maintenance, Flutter applications, and Android payment terminal integrations, which strengthened my ability to work across existing codebases and product environments.",
-        "I also started my career through a backend internship at TrackerHero, where I supported application quality, client-facing progress updates, and admin and user-side testing before release."
+        "I am a Full Stack Web Software Engineer with experience supporting and enhancing live web and mobile products across business software environments. Currently at Asian Business Software Solutions (ABSS), I work on Financio, where I handle bug fixing, feature enhancements, and data patching to improve system stability and support ongoing product operations.",
+        "My background includes hands-on experience with Laravel systems, Flutter applications, iOS app maintenance, and Android payment terminal integrations at Theta Edge Berhad, as well as backend internship experience at TrackerHero. These roles have helped me build strong skills in debugging, maintaining existing codebases, testing production-ready features, and contributing effectively across different stages of the software lifecycle.",
+        "I enjoy working on practical engineering problems, improving software reliability, and delivering solutions that support both users and business needs.",
+        "Core focus: Full stack development, production bug fixing, feature enhancement, system maintenance, and cross-platform product support."
       ],
       location: "Malaysia",
       email: "amirul.iman698@gmail.com",

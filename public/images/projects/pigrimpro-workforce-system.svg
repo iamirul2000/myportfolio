@@ -15,7 +15,7 @@
   <path d="M510 448H638" stroke="#D9F99D" stroke-opacity="0.46" stroke-width="18" stroke-linecap="round"/>
   <path d="M864 448H992" stroke="#D9F99D" stroke-opacity="0.46" stroke-width="18" stroke-linecap="round"/>
   <text x="94" y="92" fill="#D9F99D" font-size="28" font-family="Arial, sans-serif" letter-spacing="4">THETA EDGE</text>
-  <text x="94" y="704" fill="white" font-size="64" font-family="Arial, sans-serif" font-weight="700">PigrimPro Workforce System</text>
+  <text x="94" y="704" fill="white" font-size="64" font-family="Arial, sans-serif" font-weight="700">PigrimPro</text>
   <defs>
     <linearGradient id="bg" x1="82" y1="70" x2="1102" y2="726" gradientUnits="userSpaceOnUse">
       <stop stop-color="#111827"/>

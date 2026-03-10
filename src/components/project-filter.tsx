@@ -9,14 +9,21 @@ import { cn } from "@/lib/utils";
 const allLabel = "All";
 
 export function ProjectFilter({ projects }: { projects: Project[] }) {
-  const categories = useMemo(() => [allLabel, ...new Set(projects.map((project) => project.category))], [projects]);
+  const categories = useMemo(
+    () => [allLabel, ...new Set(projects.flatMap((project) => (Array.isArray(project.category) ? project.category : [project.category])))],
+    [projects]
+  );
   const [activeCategory, setActiveCategory] = useState<string>(allLabel);
 
   const filteredProjects = useMemo(() => {
     if (activeCategory === allLabel) {
       return projects;
     }
-    return projects.filter((project) => project.category === activeCategory);
+
+    return projects.filter((project) => {
+      const categories = Array.isArray(project.category) ? project.category : [project.category];
+      return categories.includes(activeCategory as (typeof categories)[number]);
+    });
   }, [activeCategory, projects]);
 
   return (

@@ -1,4 +1,4 @@
-import Image from "next/image";
+﻿import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ArrowUpRight } from "lucide-react";
@@ -32,9 +32,11 @@ export default async function ProjectDetailPage({ params }: { params: Promise<{ 
     notFound();
   }
 
+  const categories = Array.isArray(project.category) ? project.category : [project.category];
+
   return (
     <>
-      <PageHero eyebrow={project.category} title={project.title} description={project.description} />
+      <PageHero eyebrow={categories.join(" / ")} title={project.title} description={project.description} />
       <section className="pb-16">
         <div className="container grid gap-8 lg:grid-cols-[1.2fr_0.8fr] lg:items-start">
           <div className="space-y-6">

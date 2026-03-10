@@ -587,19 +587,34 @@ export const portfolioConfig = {
       tools: ["Laravel", "MySQL", "REST APIs", "Swift", "Flutter", "Android Java", "SQL", "Git"],
       services: [
         {
-          title: "Bug Fixing",
-          description: "Investigate issues in existing systems, identify root causes, and deliver safe production-ready fixes.",
+          title: "Bug Fixing and Production Support",
+          description: "Investigate issues in live systems, identify root causes, and deliver safe fixes that keep products stable in production.",
           deliverables: ["Issue investigation", "Root cause analysis", "Targeted fixes", "Regression-aware updates"]
         },
         {
           title: "Feature Enhancements",
-          description: "Improve existing product flows with practical enhancements that fit current business logic and user needs.",
+          description: "Improve existing product flows with practical enhancements that fit current business logic, workflows, and user needs.",
           deliverables: ["Enhancement delivery", "Workflow improvements", "UI updates", "Existing system integration"]
         },
         {
-          title: "Data Patching Support",
-          description: "Handle production-sensitive data patching tasks carefully to restore accuracy and support business operations.",
-          deliverables: ["Data correction", "Patch analysis", "Production support", "Issue follow-through"]
+          title: "Web App Maintenance",
+          description: "Support and extend Laravel-based web systems with a focus on maintainability, database efficiency, and API-driven functionality.",
+          deliverables: ["Laravel development", "MySQL improvements", "REST API support", "System optimization"]
+        },
+        {
+          title: "Mobile App Support",
+          description: "Maintain and improve existing mobile products across Flutter and iOS codebases, including compatibility and performance work.",
+          deliverables: ["Flutter maintenance", "iOS updates", "Performance fixes", "UI responsiveness"]
+        },
+        {
+          title: "Payment and Terminal Integration",
+          description: "Contribute to payment-related product work across mobile apps, terminal flows, SDK integrations, and API communication.",
+          deliverables: ["Payment flow support", "Android terminal work", "SDK integration", "API troubleshooting"]
+        },
+        {
+          title: "Testing and Release Support",
+          description: "Help validate software quality through debugging, scenario testing, issue identification, and pre-release support.",
+          deliverables: ["Functional testing", "Issue validation", "Release readiness", "Cross-team support"]
         }
       ],
       testimonials: [],

@@ -391,7 +391,7 @@ const developerProjects: Project[] = [
     description: "Restaurant website starter project focused on food-first presentation, direct ordering calls to action, and a warm cafe-style visual system.",
     techStack: ["Frontend Development", "Responsive Design", "Landing Page", "Vercel"],
     tags: ["Restaurant Template", "Landing Page", "Brand Experience"],
-    thumbnail: "/images/projects/restaurant-starter-cafe-template.svg",
+    thumbnail: "/images/projects/restaurant-starter-cover.svg",
     gallery: ["/images/projects/restaurant-starter-cafe-template.svg"],
     links: [{ label: "Live Site", href: "https://restaurantstarter.vercel.app/" }],
     results: [
@@ -418,7 +418,7 @@ const developerProjects: Project[] = [
     description: "Personal workshop operations app focused on customers, jobs, technicians, inventory, and billing in a cleaner admin workflow.",
     techStack: ["Web Application", "Admin Dashboard", "Operations Workflow", "Railway"],
     tags: ["Workshop Management", "Billing", "Inventory"],
-    thumbnail: "/images/projects/workshopflow-operations-dashboard.svg",
+    thumbnail: "/images/projects/workshopflow-cover.svg",
     gallery: ["/images/projects/workshopflow-operations-dashboard.svg"],
     links: [{ label: "Live Site", href: "https://workshopflow-production.up.railway.app/login" }],
     results: [

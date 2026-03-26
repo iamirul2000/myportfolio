@@ -385,14 +385,14 @@ const developerProjects: Project[] = [
     featured: true
   },
   {
-    title: "Kopi & Dapur",
-    slug: "kopi-dapur",
+    title: "RestaurantStarter",
+    slug: "restaurant-starter",
     category: ["Web App", "UI/UX"],
-    description: "Personal frontend project for a modern Malaysian cafe website, focused on food-first presentation, direct ordering calls to action, and a clear local brand feel.",
+    description: "Restaurant website starter project focused on food-first presentation, direct ordering calls to action, and a warm cafe-style visual system.",
     techStack: ["Frontend Development", "Responsive Design", "Landing Page", "Vercel"],
-    tags: ["Cafe Website", "Landing Page", "Brand Experience"],
-    thumbnail: "/images/projects/kopi-dapur-modern-cafe-template.svg",
-    gallery: ["/images/projects/kopi-dapur-modern-cafe-template.svg"],
+    tags: ["Restaurant Template", "Landing Page", "Brand Experience"],
+    thumbnail: "/images/projects/restaurant-starter-cafe-template.svg",
+    gallery: ["/images/projects/restaurant-starter-cafe-template.svg"],
     links: [{ label: "Live Site", href: "https://restaurantstarter.vercel.app/" }],
     results: [
       "Built a polished landing page with responsive sections and clear hierarchy",
@@ -400,7 +400,7 @@ const developerProjects: Project[] = [
       "Used custom styling and layout work to give the site a stronger local brand feel"
     ],
     overview:
-      "Kopi & Dapur is a personal web project built as a modern cafe website concept. The goal was to create a cleaner, more intentional alternative to generic restaurant templates while keeping the experience practical for real customer actions.",
+      "RestaurantStarter is a personal web project built as a modern cafe and restaurant landing page concept. The goal was to create a cleaner, more intentional alternative to generic food business templates while keeping the experience practical for real customer actions.",
     challenge:
       "Many small business food sites feel visually inconsistent or overly generic, which makes it harder to communicate brand personality and guide visitors toward direct actions.",
     solution:

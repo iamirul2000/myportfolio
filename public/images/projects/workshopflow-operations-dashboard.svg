@@ -1,0 +1,75 @@
+<svg width="1600" height="1000" viewBox="0 0 1600 1000" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="160" y1="120" x2="1450" y2="860" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#EEF4FF"/>
+      <stop offset="0.5" stop-color="#F8FBFF"/>
+      <stop offset="1" stop-color="#E6F7F8"/>
+    </linearGradient>
+    <linearGradient id="panel" x1="340" y1="250" x2="920" y2="760" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#193246"/>
+      <stop offset="1" stop-color="#3B8E8A"/>
+    </linearGradient>
+    <linearGradient id="button" x1="1060" y1="690" x2="1380" y2="690" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#117C84"/>
+      <stop offset="1" stop-color="#2E65E6"/>
+    </linearGradient>
+    <filter id="shadow" x="250" y="180" width="1120" height="560" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+      <feOffset dy="18"/>
+      <feGaussianBlur stdDeviation="30"/>
+      <feColorMatrix type="matrix" values="0 0 0 0 0.168627 0 0 0 0 0.262745 0 0 0 0 0.364706 0 0 0 0.16 0"/>
+      <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_0_1"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_0_1" result="shape"/>
+    </filter>
+  </defs>
+
+  <rect width="1600" height="1000" rx="24" fill="url(#bg)"/>
+  <circle cx="310" cy="250" r="150" fill="#C8D9FF" fill-opacity="0.38"/>
+  <circle cx="1360" cy="190" r="180" fill="#D9F4F3" fill-opacity="0.42"/>
+  <circle cx="1260" cy="760" r="210" fill="#C6EEF0" fill-opacity="0.38"/>
+
+  <g filter="url(#shadow)">
+    <rect x="340" y="250" width="540" height="420" rx="34" fill="url(#panel)"/>
+    <rect x="900" y="220" width="390" height="460" rx="34" fill="#FFFFFF" fill-opacity="0.94"/>
+  </g>
+
+  <text x="380" y="306" fill="#C9D8FF" font-family="Arial, sans-serif" font-size="26" letter-spacing="5">WORKSHOPFLOW</text>
+  <text x="380" y="392" fill="#FFFFFF" font-family="Arial, sans-serif" font-size="44" font-weight="700">Workshop operations, billing,</text>
+  <text x="380" y="448" fill="#FFFFFF" font-family="Arial, sans-serif" font-size="44" font-weight="700">inventory, and job tracking.</text>
+  <text x="380" y="520" fill="#F1F7FB" font-family="Arial, sans-serif" font-size="22">A cleaner admin workspace for customers, technicians, jobs,</text>
+  <text x="380" y="552" fill="#F1F7FB" font-family="Arial, sans-serif" font-size="22">inventory, quotations, invoicing, and reporting.</text>
+
+  <rect x="380" y="590" width="156" height="118" rx="18" fill="#FFFFFF" fill-opacity="0.10" stroke="#FFFFFF" stroke-opacity="0.14"/>
+  <rect x="550" y="590" width="156" height="118" rx="18" fill="#FFFFFF" fill-opacity="0.10" stroke="#FFFFFF" stroke-opacity="0.14"/>
+  <rect x="720" y="590" width="156" height="118" rx="18" fill="#FFFFFF" fill-opacity="0.10" stroke="#FFFFFF" stroke-opacity="0.14"/>
+
+  <text x="405" y="625" fill="#C8E8E8" font-family="Arial, sans-serif" font-size="18" letter-spacing="3">JOBS</text>
+  <text x="405" y="670" fill="#FFFFFF" font-family="Arial, sans-serif" font-size="24" font-weight="700">Track repair</text>
+  <text x="405" y="703" fill="#FFFFFF" font-family="Arial, sans-serif" font-size="24" font-weight="700">progress</text>
+
+  <text x="575" y="625" fill="#C8E8E8" font-family="Arial, sans-serif" font-size="18" letter-spacing="3">BILLING</text>
+  <text x="575" y="670" fill="#FFFFFF" font-family="Arial, sans-serif" font-size="24" font-weight="700">Quote and invoice</text>
+  <text x="575" y="703" fill="#FFFFFF" font-family="Arial, sans-serif" font-size="24" font-weight="700">in one flow</text>
+
+  <text x="745" y="625" fill="#C8E8E8" font-family="Arial, sans-serif" font-size="18" letter-spacing="3">INVENTORY</text>
+  <text x="745" y="670" fill="#FFFFFF" font-family="Arial, sans-serif" font-size="24" font-weight="700">Monitor parts</text>
+  <text x="745" y="703" fill="#FFFFFF" font-family="Arial, sans-serif" font-size="24" font-weight="700">before shortages</text>
+
+  <text x="950" y="286" fill="#6B7B93" font-family="Arial, sans-serif" font-size="24" letter-spacing="4">WELCOME BACK</text>
+  <text x="950" y="362" fill="#1C2740" font-family="Arial, sans-serif" font-size="52" font-weight="700">Sign in to</text>
+  <text x="950" y="422" fill="#1C2740" font-family="Arial, sans-serif" font-size="52" font-weight="700">WorkshopFlow</text>
+  <text x="950" y="474" fill="#66758C" font-family="Arial, sans-serif" font-size="22">Admin access for customers, jobs,</text>
+  <text x="950" y="506" fill="#66758C" font-family="Arial, sans-serif" font-size="22">technicians, inventory, and billing.</text>
+
+  <text x="950" y="582" fill="#5A677C" font-family="Arial, sans-serif" font-size="18" font-weight="700">Email</text>
+  <rect x="950" y="598" width="320" height="62" rx="18" fill="#FAFCFF" stroke="#CAD6E6" stroke-width="2"/>
+  <text x="972" y="638" fill="#93A3BC" font-family="Arial, sans-serif" font-size="18">name@company.com</text>
+
+  <text x="950" y="714" fill="#5A677C" font-family="Arial, sans-serif" font-size="18" font-weight="700">Password</text>
+  <rect x="950" y="730" width="320" height="62" rx="18" fill="#FAFCFF" stroke="#CAD6E6" stroke-width="2"/>
+  <text x="972" y="770" fill="#93A3BC" font-family="Arial, sans-serif" font-size="18">Enter your password</text>
+
+  <rect x="950" y="820" width="320" height="60" rx="18" fill="url(#button)"/>
+  <text x="1087" y="858" fill="#FFFFFF" font-family="Arial, sans-serif" font-size="24" font-weight="700">Sign in</text>
+</svg>

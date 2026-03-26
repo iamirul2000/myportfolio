@@ -412,6 +412,34 @@ const developerProjects: Project[] = [
     ]
   },
   {
+    title: "WorkshopFlow",
+    slug: "workshopflow",
+    category: ["Web App", "Dashboard"],
+    description: "Personal workshop operations app focused on customers, jobs, technicians, inventory, and billing in a cleaner admin workflow.",
+    techStack: ["Web Application", "Admin Dashboard", "Operations Workflow", "Railway"],
+    tags: ["Workshop Management", "Billing", "Inventory"],
+    thumbnail: "/images/projects/workshopflow-operations-dashboard.svg",
+    gallery: ["/images/projects/workshopflow-operations-dashboard.svg"],
+    links: [{ label: "Live Site", href: "https://workshopflow-production.up.railway.app/login" }],
+    results: [
+      "Organized core workshop operations into one admin-facing product flow",
+      "Built a clearer product direction around jobs, technicians, inventory, and billing",
+      "Deployed a live version for real-world access and iteration"
+    ],
+    overview:
+      "WorkshopFlow is a personal web application built around the day-to-day workflow of a repair workshop. From the current product direction, it brings together customer handling, job tracking, technician assignment, inventory, and billing inside one admin workspace.",
+    challenge:
+      "Operational workshop work often spans multiple related tasks, so the product needs to keep information structured and easy to move through without making admin work feel fragmented.",
+    solution:
+      "I shaped the experience around a straightforward admin flow, with clear entry points for jobs, billing, inventory, and related workshop operations so the system feels more focused and easier to use.",
+    impact: [
+      "Created a more coherent admin experience for workshop operations",
+      "Made key operational areas easier to understand at a glance",
+      "Added another practical product build to the portfolio beyond maintenance-heavy work"
+    ],
+    featured: true
+  },
+  {
     title: "TrackerHero",
     slug: "trackerhero",
     category: "Dashboard",

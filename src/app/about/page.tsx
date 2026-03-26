@@ -14,11 +14,11 @@ export default function AboutPage() {
 
   return (
     <>
-      <PageHero eyebrow="About" title={`Meet ${persona.label}`} description={persona.shortBio} />
+      <PageHero eyebrow="About" title={`About ${persona.label}`} description={persona.shortBio} />
       <section className="pb-16">
         <div className="container grid gap-6 lg:grid-cols-[1fr_0.9fr]">
           <Card className="space-y-5">
-            <h2 className="text-2xl font-semibold">Professional summary</h2>
+            <h2 className="text-2xl font-semibold">Engineering summary</h2>
             {persona.longBio.map((paragraph) => (
               <p key={paragraph} className="text-sm leading-7 text-muted-foreground sm:text-base">
                 {paragraph}

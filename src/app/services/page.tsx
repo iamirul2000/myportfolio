@@ -4,7 +4,7 @@ import { getActivePersona } from "@/data/portfolio-config";
 import { buildMetadata } from "@/lib/metadata";
 
 export const metadata = buildMetadata({
-  title: "Services",
+  title: "Focus Areas",
   description: "Main contribution areas and working strengths for Amirul Iman.",
   path: "/services"
 });
@@ -14,7 +14,7 @@ export default function ServicesPage() {
 
   return (
     <>
-      <PageHero eyebrow="Services" title="How I contribute" description="The engineering areas I currently focus on most across product maintenance, enhancements, and support." />
+      <PageHero eyebrow="Contribution Areas" title="How I contribute" description="The engineering areas where I add the most value across product maintenance, backend work, feature delivery, and release support." />
       <section className="pb-16">
         <div className="container grid gap-6 lg:grid-cols-3">
           {persona.services.map((service) => (

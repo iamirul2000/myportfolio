@@ -11,8 +11,8 @@ export function SkillsSection() {
       <div className="container grid gap-8 lg:grid-cols-[0.8fr_1.2fr]">
         <SectionHeading
           eyebrow="Expertise"
-          title="Core skills and working stack"
-          description="The main technologies, product work, and support areas that shape how I contribute as an engineer."
+          title="What I work with"
+          description="I work across backend development, web applications, APIs, databases, and mobile product support, with day-to-day experience in Laravel, PHP, MySQL, Angular, TypeScript, JavaScript, Flutter, and Swift."
         />
         <div className="grid gap-6 md:grid-cols-2">
           <Card>

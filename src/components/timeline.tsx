@@ -10,7 +10,7 @@ export function Timeline() {
         <SectionHeading
           eyebrow="Experience"
           title="Career timeline"
-          description="A quick look at the roles and product work that shape my current engineering experience."
+          description="Experience across full stack product engineering, system maintenance, API integration, database design, mobile support, testing, and release-focused delivery in live software environments."
         />
         <div className="space-y-6">
           {persona.timeline.map((entry) => (

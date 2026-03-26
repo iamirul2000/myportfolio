@@ -71,7 +71,7 @@ export function HeroSection() {
             <div className="flex items-center justify-between gap-4">
               <div>
                 <p className="text-sm uppercase tracking-[0.2em] text-muted-foreground">Profile Summary</p>
-                <h2 className="mt-2 text-2xl font-semibold">Current focus and engineering profile</h2>
+                <h2 className="mt-2 text-2xl font-semibold">Production-minded full stack engineer with backend depth</h2>
               </div>
               <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-primary via-sky-500 to-accent text-white shadow-glow">
                 <Sparkles className="h-5 w-5" />

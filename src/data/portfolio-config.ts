@@ -274,7 +274,7 @@ const developerProjects: Project[] = [
     title: "Financio",
     slug: "financio",
     category: "Web App",
-    description: "Contributed to Financio through bug fixing, feature enhancements, and data patching for a live production product at ABSS.",
+    description: "Production support and enhancement work for Financio at ABSS, covering bug fixes, feature updates, and data patching in a live business software product.",
     techStack: ["Angular", "MySQL", "Debugging", "Laravel", "PHP"],
     tags: ["Bug Fixing", "Enhancements", "Data Patching"],
     thumbnail: "/images/projects/financio-product-support-and-enhancements-main.svg",
@@ -284,20 +284,20 @@ const developerProjects: Project[] = [
       { label: "LinkedIn", href: "https://www.linkedin.com/in/mirul-/" }
     ],
     results: [
-      "Resolved reported issues across existing product flows",
-      "Delivered iterative enhancements within an active production codebase",
-      "Supported data correction and patching for operational continuity"
+      "Investigated and resolved issues across existing product flows",
+      "Delivered targeted feature enhancements inside a live production codebase",
+      "Handled data patching work with care for existing records and business rules"
     ],
     overview:
-      "At ABSS, I work on Financio as part of the ongoing engineering effort to keep the product stable, reliable, and easier to support.",
+      "At ABSS, I work on Financio as part of the ongoing engineering effort behind a live product used for day-to-day business operations. My work spans bug fixing, feature enhancement, and data patching, with a strong focus on stability and safe delivery.",
     challenge:
-      "Supporting a live business product means balancing bug fixing, feature work, and data-sensitive changes without disrupting existing users or workflows.",
+      "Working on a live product means changes have to fit existing workflows, business rules, and production data. Even small fixes or enhancements need to be careful, practical, and low-risk.",
     solution:
-      "I investigate reported issues, implement safe fixes, ship practical enhancements, and support data patching tasks with care for existing business rules and production behavior.",
+      "I investigate reported issues, trace problems through the current codebase, implement safe fixes, support incremental enhancements, and handle data patching tasks with attention to existing behavior in production.",
     impact: [
-      "Improved product reliability and day-to-day usability",
-      "Kept delivery moving through targeted enhancements instead of large rewrites",
-      "Helped maintain confidence in a production finance platform"
+      "Improved reliability across existing product flows",
+      "Supported continuous delivery through focused, low-risk changes",
+      "Helped maintain a stable production experience for business users"
     ],
     featured: true
   },
@@ -305,27 +305,27 @@ const developerProjects: Project[] = [
     title: "PigrimPro",
     slug: "pigrimpro",
     category: ["Web App", "Mobile App"],
-    description: "Built and optimized a Laravel-based web system with MySQL for company operations and data management.",
+    description: "Laravel and MySQL-based workforce and operations system built around backend improvements, database design, and API development for internal business workflows.",
     techStack: ["Laravel", "MySQL", "REST APIs", "Backend Development", "Frontend Integration", "Mobile Development - Android", "Stripe Integration", "PHP"],
     tags: ["Laravel", "Operations", "Web Development"],
     thumbnail: "/images/projects/pigrimpro-workforce-system.svg",
     gallery: ["/images/projects/pigrimpro-workforce-system.svg"],
     links: [{ label: "Contact", href: "/contact" }],
     results: [
-      "Improved query performance and reduced redundancy through schema normalization",
-      "Built RESTful APIs for backend and frontend communication",
-      "Helped support high-volume transactions with lower latency"
+      "Improved schema quality and reduced redundancy through database normalization",
+      "Built RESTful APIs to support frontend and backend communication",
+      "Optimized backend behavior to better handle ongoing operational workloads"
     ],
     overview:
-      "At Theta Edge Berhad, I worked on PigrimPro as a Laravel and MySQL web platform supporting operational workflows and company data management.",
+      "At Theta Edge Berhad, I worked on PigrimPro as a Laravel-based system used for company operations and data management. The work involved backend development, database improvements, API support, testing, and keeping the platform reliable for day-to-day use.",
     challenge:
-      "The system needed solid data handling, reliable API communication, and backend efficiency that could support ongoing business usage.",
+      "The platform needed reliable data handling, cleaner database design, and backend performance that could support everyday business usage without creating unnecessary complexity.",
     solution:
-      "I developed and optimized the platform, improved the database structure, built RESTful APIs, and collaborated with other developers to keep the system stable and user-friendly.",
+      "I developed and optimized Laravel features, improved the MySQL schema, built RESTful APIs, and worked closely with other developers to keep the system stable, maintainable, and easier to extend.",
     impact: [
-      "Improved reliability through testing and debugging",
-      "Reduced latency in important backend workflows",
-      "Delivered a stronger foundation for day-to-day operations"
+      "Improved reliability through debugging, testing, and optimization work",
+      "Reduced inefficiencies in key backend and data workflows",
+      "Strengthened the foundation for ongoing operational use"
     ],
     featured: true
   },
@@ -333,54 +333,54 @@ const developerProjects: Project[] = [
     title: "SakuPay",
     slug: "sakupay",
     category: "Mobile App",
-    description: "Maintained and updated an existing iOS app in Swift while improving compatibility, performance, and UI responsiveness.",
+    description: "Maintenance and enhancement work on an existing Swift iOS application, focused on compatibility, performance, responsiveness, and long-term maintainability.",
     techStack: ["Swift", "iOS", "Mobile Maintenance", "Debugging"],
     tags: ["iOS", "Maintenance", "Performance"],
     thumbnail: "/images/projects/sakupay-ios-maintenance.svg",
     gallery: ["/images/projects/sakupay-ios-maintenance.svg"],
     links: [{ label: "Contact", href: "/contact" }],
     results: [
-      "Improved app compatibility with newer iOS versions and devices",
-      "Resolved bugs and performance issues in an existing codebase",
-      "Contributed features and code documentation for future updates"
+      "Updated the app for newer iOS versions and device support",
+      "Resolved bugs and improved performance in an existing codebase",
+      "Added documentation to support future maintenance and updates"
     ],
     overview:
-      "I supported SakuPay as an iOS maintenance effort, working in Swift to keep the app stable, responsive, and easier to maintain over time.",
+      "SakuPay involved maintaining and improving an existing iOS application in Swift. The work centered on keeping the app stable on newer devices, fixing issues in an established codebase, and making it easier to maintain over time.",
     challenge:
-      "Working on an existing mobile app meant balancing bug fixing, OS compatibility, UI performance, and partially deployed feature work.",
+      "Maintaining an existing mobile app meant balancing bug fixing, OS compatibility, UI responsiveness, and partially delivered feature work without introducing regressions.",
     solution:
-      "I updated the application for newer platforms, fixed issues, improved responsiveness, and documented code to support maintainability and future enhancement work.",
+      "I updated the application for newer iOS versions, fixed bugs, improved UI responsiveness, and documented parts of the codebase to support future maintenance and enhancement work.",
     impact: [
-      "Stronger stability on real devices",
-      "Better maintainability for future developers",
-      "Practical improvement of an actively maintained app"
+      "Improved stability and compatibility on supported devices",
+      "Made the codebase easier to maintain for future updates",
+      "Contributed practical improvements to an actively maintained app"
     ]
   },
   {
     title: "POSLite",
     slug: "poslite",
     category: ["Mobile App", "Web App"],
-    description: "Built features for a Flutter and Android payment terminal solution with authentication, payments, and real-time synchronization.",
+    description: "Cross-platform payment product spanning Flutter mobile interfaces and an Android terminal app, with API integration, transaction flow work, and real-time synchronization.",
     techStack: ["Flutter", "Android Java", "Payment SDK", "UI Development", "API Integration", "Laravel", "PHP", "Postman"],
     tags: ["Flutter", "Android", "Payments"],
     thumbnail: "/images/projects/poslite-payment-terminal.svg",
     gallery: ["/images/projects/poslite-payment-terminal.svg"],
     links: [{ label: "Contact", href: "/contact" }],
     results: [
-      "Integrated APIs for authentication, payments, and real-time sync",
-      "Built Flutter widgets with cleaner, more intuitive UI",
-      "Contributed Android terminal flow design and SDK integration"
+      "Integrated APIs for authentication, payments, and real-time synchronization",
+      "Built Flutter widgets with cleaner and more intuitive interaction flows",
+      "Contributed terminal-side transaction logic and payment SDK integration"
     ],
     overview:
-      "POSLite combined Flutter mobile development with Android payment terminal work, including UI design, transaction flows, and API integration.",
+      "POSLite combined Flutter mobile development with Android payment terminal work in a payment-focused product. My work covered UI implementation, API integration, transaction flow support, and troubleshooting data flow issues across the system.",
     challenge:
-      "Payment products require stable transaction handling, secure SDK integration, and reliable communication between mobile and terminal environments.",
+      "Payment systems require stable transaction handling, reliable communication between devices, and careful integration with terminal hardware and gateway SDKs.",
     solution:
-      "I worked across Flutter and Android layers, handled UI implementation, supported transaction flow design, and resolved API and data flow issues with backend developers.",
+      "I worked across Flutter and Android layers, built UI components, supported transaction flow design, integrated payment-related SDK behavior, and collaborated with backend developers to resolve API and data flow issues.",
     impact: [
-      "Improved usability across terminal and mobile flows",
-      "Strengthened real-world testing and validation",
-      "Built hands-on experience in payment integrations and security-focused workflows"
+      "Improved usability across both terminal and mobile touchpoints",
+      "Strengthened product stability through testing and issue resolution",
+      "Built hands-on experience in payment integrations and transaction-focused workflows"
     ],
     featured: true
   },
@@ -388,54 +388,54 @@ const developerProjects: Project[] = [
     title: "Kopi & Dapur",
     slug: "kopi-dapur",
     category: ["Web App", "UI/UX"],
-    description: "A modern Malaysian cafe website concept focused on food-first presentation, direct orders, and strong local brand styling.",
+    description: "Personal frontend project for a modern Malaysian cafe website, focused on food-first presentation, direct ordering calls to action, and a clear local brand feel.",
     techStack: ["Frontend Development", "Responsive Design", "Landing Page", "Vercel"],
     tags: ["Cafe Website", "Landing Page", "Brand Experience"],
     thumbnail: "/images/projects/kopi-dapur-modern-cafe-template.svg",
     gallery: ["/images/projects/kopi-dapur-modern-cafe-template.svg"],
     links: [{ label: "Live Site", href: "https://restaurantstarter.vercel.app/" }],
     results: [
-      "Created a polished restaurant landing page with a clear visual identity",
-      "Designed around direct ordering and conversion-focused calls to action",
-      "Showcased a warm local cafe aesthetic with mobile-friendly structure"
+      "Built a polished landing page with responsive sections and clear hierarchy",
+      "Designed direct ordering paths around call and WhatsApp actions",
+      "Used custom styling and layout work to give the site a stronger local brand feel"
     ],
     overview:
-      "Kopi & Dapur is a modern cafe website concept built to help local food businesses present their brand clearly and encourage more direct customer action.",
+      "Kopi & Dapur is a personal web project built as a modern cafe website concept. The goal was to create a cleaner, more intentional alternative to generic restaurant templates while keeping the experience practical for real customer actions.",
     challenge:
-      "Cafe websites often feel generic or cluttered, which makes it harder to highlight signature dishes, atmosphere, and simple ordering paths.",
+      "Many small business food sites feel visually inconsistent or overly generic, which makes it harder to communicate brand personality and guide visitors toward direct actions.",
     solution:
-      "I focused the layout around food-first visuals, clean typography, warm local styling, and clear CTAs like WhatsApp ordering and call actions.",
+      "I designed the layout around strong visual hierarchy, warm local styling, food-focused presentation, and direct CTAs like WhatsApp ordering and call actions.",
     impact: [
-      "Stronger first impression for a local cafe brand",
-      "Clearer direct-ordering journey",
-      "More intentional balance between aesthetics and usability"
+      "Created a stronger first impression than a typical template-style site",
+      "Made direct-ordering actions easier to find",
+      "Balanced visual design with practical usability on desktop and mobile"
     ]
   },
   {
     title: "TrackerHero",
     slug: "trackerhero",
     category: "Dashboard",
-    description: "Supported backend delivery, code review, testing, and issue identification during an internship at TrackerHero.",
+    description: "Backend internship experience covering technical support, testing, issue validation, and client-aware delivery on active product work.",
     techStack: ["Backend Support", "Testing", "Laravel", "PHP", "Postman"],
     tags: ["Internship", "Backend", "QA"],
     thumbnail: "/images/projects/trackerhero-backend-internship.svg",
     gallery: ["/images/projects/trackerhero-backend-internship.svg"],
     links: [{ label: "Resume", href: "/resume" }],
     results: [
-      "Supported developers with technical and quality-focused tasks",
-      "Helped keep projects aligned with client needs and feedback",
-      "Assisted testing from both user and admin perspectives before release"
+      "Supported developers with technical tasks and quality-focused checks",
+      "Helped keep work aligned with client requirements and feedback",
+      "Tested application flows from both user and admin perspectives before release"
     ],
     overview:
-      "During my internship at TrackerHero, I contributed to backend-related delivery support while learning how product quality, testing, and communication come together in a live team environment.",
+      "During my internship at TrackerHero, I supported backend-related work while learning how testing, issue validation, communication, and delivery all connect in a live product team.",
     challenge:
-      "The role involved balancing hands-on technical assistance with communication, testing, and progress tracking across active workstreams.",
+      "The role required balancing technical support with quality checks, progress tracking, and communication around active client-facing work.",
     solution:
-      "I supported technical reviews, validated application behavior, identified issues before release, and helped keep project progress aligned with client expectations.",
+      "I supported developers with technical assistance, helped validate application behavior, identified issues before release, and kept progress aligned with client needs and project requirements.",
     impact: [
-      "Strengthened my foundation in backend teamwork",
-      "Improved my understanding of release quality checks",
-      "Built early experience in client-aware engineering delivery"
+      "Strengthened my foundation in backend team workflows",
+      "Improved my understanding of testing and release-readiness work",
+      "Built early experience in client-aware software delivery"
     ]
   }
 ];
@@ -471,7 +471,7 @@ export const portfolioConfig = {
     { label: "Home", href: "/" },
     { label: "About", href: "/about" },
     { label: "Projects", href: "/projects" },
-    { label: "Services", href: "/services" },
+    { label: "Focus Areas", href: "/services" },
     { label: "Resume", href: "/resume" },
     { label: "Contact", href: "/contact" }
   ],
@@ -580,15 +580,16 @@ export const portfolioConfig = {
     developer: {
       label: "Amirul Iman",
       role: "Full Stack Web Software Engineer",
-      tagline: "Full stack engineer with experience across web, mobile, APIs, and product maintenance, focused on reliable software and practical delivery.",
+      tagline:
+        "Currently working on Financio at ABSS, I support a live business product through bug fixing, feature enhancements, data patching, and day-to-day engineering work across existing systems.",
       availability: "Currently working at Asian Business Software Solutions (ABSS)",
       shortBio:
-        "I am a Full Stack Web Software Engineer with experience supporting and enhancing live web and mobile products across business software environments.",
+        "Full Stack Web Software Engineer with experience building, maintaining, and improving production web and mobile applications. Strongest in backend-heavy product work across Laravel, PHP, MySQL, REST APIs, Angular, Flutter, and live system support.",
       longBio: [
-        "I am a Full Stack Web Software Engineer with experience supporting and enhancing live web and mobile products across business software environments. Currently at Asian Business Software Solutions (ABSS), I work on Financio, where I handle bug fixing, feature enhancements, and data patching to improve system stability and support ongoing product operations.",
-        "My background includes hands-on experience with Laravel systems, Flutter applications, iOS app maintenance, and Android payment terminal integrations at Theta Edge Berhad, as well as backend internship experience at TrackerHero. These roles have helped me build strong skills in debugging, maintaining existing codebases, testing production-ready features, and contributing effectively across different stages of the software lifecycle.",
-        "I enjoy working on practical engineering problems, improving software reliability, and delivering solutions that support both users and business needs.",
-        "Core focus: Full stack development, production bug fixing, feature enhancement, system maintenance, and cross-platform product support."
+        "I am a Full Stack Web Software Engineer with hands-on experience building, enhancing, and maintaining production software across web and mobile products. At Asian Business Software Solutions, I work on Financio, where I handle bug fixing, feature enhancements, and data patching in a live product environment.",
+        "Before ABSS, I worked at Theta Edge Berhad across Laravel web systems, REST APIs, MySQL-backed applications, iOS app maintenance in Swift, Flutter feature development, and Android payment terminal integration. I also gained early backend and release-support experience during my internship at TrackerHero.",
+        "My strongest work is in debugging existing systems, improving reliability, refining backend behavior, and shipping changes that fit real product constraints.",
+        "Core focus: Full stack development, backend-heavy product work, production bug fixing, feature enhancement, system maintenance, and cross-platform product support."
       ],
       location: "Malaysia",
       email: "amirul.iman698@gmail.com",
@@ -610,8 +611,8 @@ export const portfolioConfig = {
         { value: "Oct 2025", label: "Started at ABSS" }
       ],
       trustedBy: ["Asian Business Software Solutions", "Financio", "Theta Edge Berhad", "PigrimPro", "SakuPay", "POSLite", "TrackerHero"],
-      skills: ["Laravel", "REST APIs", "MySQL", "Bug Fixing", "Feature Enhancements", "Data Patching", "iOS Maintenance", "Flutter", "Android Payment Integration", "Troubleshooting", "Testing", "Production Support"],
-      tools: ["Laravel", "MySQL", "REST APIs", "Swift", "Flutter", "Android Java", "SQL", "Git"],
+      skills: ["Laravel", "PHP", "MySQL", "REST APIs", "Angular", "TypeScript", "JavaScript", "Flutter", "Swift", "Bug Fixing", "Testing", "Production Support"],
+      tools: ["Laravel", "PHP", "Angular", "TypeScript", "JavaScript", "MySQL", "MariaDB", "MongoDB", "Swift", "Flutter", "Ionic", "Vue.js", "Git"],
       services: [
         {
           title: "Bug Fixing and Production Support",
@@ -703,7 +704,7 @@ export const portfolioConfig = {
       phone: "+1 415 555 0199",
       website: "https://portfolionova.dev",
       heroCtas: [
-        { label: "See Services", href: "/services" },
+        { label: "Focus Areas", href: "/services" },
         { label: "Start a Project", href: "/contact" }
       ],
       nav: [],

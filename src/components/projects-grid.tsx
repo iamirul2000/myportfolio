@@ -14,7 +14,7 @@ export function ProjectsGrid({ featuredOnly = false }: { featuredOnly?: boolean 
         <SectionHeading
           eyebrow={featuredOnly ? "Featured Work" : "Projects"}
           title="Work highlights and product contributions"
-          description="A mix of current engineering work and practical contributions across product maintenance, enhancements, and support."
+          description="A selection of product work across business software, mobile applications, payment-related systems, and personal builds."
         />
         <div className="grid gap-6 lg:grid-cols-2 xl:grid-cols-3">
           {projects.map((project) => (

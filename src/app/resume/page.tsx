@@ -20,7 +20,7 @@ export default function ResumePage() {
       <PageHero
         eyebrow="Resume"
         title="Resume and experience"
-        description="Download my resume and review my current role, timeline, and product experience."
+        description="Download my resume and review my current role, engineering timeline, and product work across web, APIs, mobile support, and production systems."
         aside={
           <Button asChild size="lg">
             <Link href={persona.resumeFile} download>

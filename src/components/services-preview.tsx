@@ -12,9 +12,9 @@ export function ServicesPreview() {
     <section className="py-16">
       <div className="container space-y-10">
         <SectionHeading
-          eyebrow="Services"
+          eyebrow="Contribution Areas"
           title="How I usually contribute"
-          description="The areas where I add the most value across shipping, support, and continuous improvement work."
+          description="The engineering work I contribute most often across backend support, feature delivery, debugging, and product maintenance."
         />
         <div className="grid gap-6 lg:grid-cols-3">
           {persona.services.map((service) => (
@@ -32,7 +32,7 @@ export function ServicesPreview() {
           ))}
         </div>
         <Button asChild variant="secondary">
-          <Link href="/services">See full services</Link>
+          <Link href="/services">View focus areas</Link>
         </Button>
       </div>
     </section>

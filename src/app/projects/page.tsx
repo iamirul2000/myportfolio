@@ -17,7 +17,7 @@ export default function ProjectsPage() {
       <PageHero
         eyebrow="Projects"
         title="Projects and product contributions"
-        description="A closer look at the engineering work, product support, web and mobile experience, and project contributions across my career so far."
+        description="A selection of product work across business software, mobile applications, payment-related systems, and personal builds. These projects reflect the work I do most often: maintaining live systems, improving existing codebases, building practical features, and solving real product problems."
       />
       <section className="pb-16">
         <div className="container">

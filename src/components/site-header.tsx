@@ -33,7 +33,7 @@ export function SiteHeader() {
         <div className="flex items-center gap-3">
           {portfolioConfig.theme.enableThemeToggle ? <ModeToggle /> : null}
           <Button asChild className="hidden sm:inline-flex">
-            <Link href="/contact">Let&apos;s work</Link>
+            <Link href="/contact">Get in touch</Link>
           </Button>
           <MobileNav />
         </div>

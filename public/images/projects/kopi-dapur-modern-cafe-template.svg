@@ -1,0 +1,47 @@
+﻿<svg width="1200" height="800" viewBox="0 0 1200 800" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="800" rx="40" fill="#F5EADB"/>
+  <rect x="36" y="36" width="1128" height="728" rx="32" fill="url(#bg)" stroke="#D7B99A" stroke-opacity="0.45"/>
+  <rect x="72" y="72" width="1056" height="80" rx="22" fill="#F7F0E6" stroke="#D8C5AF" stroke-opacity="0.6"/>
+  <rect x="110" y="96" width="80" height="32" rx="16" fill="#3B261D"/>
+  <text x="126" y="118" fill="white" font-size="26" font-family="Arial, sans-serif" font-weight="700">K &amp; D</text>
+  <text x="214" y="112" fill="#3B261D" font-size="24" font-family="Georgia, serif">Kopi &amp; Dapur</text>
+  <text x="214" y="136" fill="#9B826B" font-size="16" font-family="Arial, sans-serif" letter-spacing="4">MODERN LOCAL CAFE</text>
+  <path d="M480 112H760" stroke="#7B6758" stroke-opacity="0.55" stroke-width="10" stroke-linecap="round" stroke-dasharray="32 26"/>
+  <rect x="900" y="92" width="170" height="40" rx="20" fill="#3B261D"/>
+  <text x="933" y="118" fill="white" font-size="22" font-family="Arial, sans-serif" font-weight="700">WhatsApp</text>
+  <text x="110" y="230" fill="#C46E47" font-size="24" font-family="Arial, sans-serif" letter-spacing="6">MODERN MALAYSIAN CAFE TEMPLATE</text>
+  <text x="110" y="340" fill="#2F201A" font-size="78" font-family="Georgia, serif">Food-first design</text>
+  <text x="110" y="430" fill="#2F201A" font-size="78" font-family="Georgia, serif">for cafes that want</text>
+  <text x="110" y="520" fill="#2F201A" font-size="78" font-family="Georgia, serif">more walk-ins</text>
+  <text x="110" y="610" fill="#2F201A" font-size="78" font-family="Georgia, serif">and direct orders.</text>
+  <path d="M112 666H510" stroke="#5F4A3E" stroke-opacity="0.58" stroke-width="16" stroke-linecap="round"/>
+  <path d="M112 706H462" stroke="#5F4A3E" stroke-opacity="0.32" stroke-width="16" stroke-linecap="round"/>
+  <rect x="112" y="732" width="196" height="44" rx="22" fill="#3B261D"/>
+  <text x="152" y="760" fill="white" font-size="24" font-family="Arial, sans-serif" font-weight="700">Order on WhatsApp</text>
+  <rect x="334" y="732" width="116" height="44" rx="22" fill="#F7F0E6" stroke="#D6C0A8"/>
+  <text x="369" y="760" fill="#6C584C" font-size="24" font-family="Arial, sans-serif">Call</text>
+  <rect x="744" y="248" width="320" height="492" rx="34" fill="#FFF8F1"/>
+  <rect x="784" y="292" width="240" height="404" rx="26" fill="#F2E6D3"/>
+  <circle cx="906" cy="496" r="122" fill="#FFF7ED"/>
+  <ellipse cx="906" cy="504" rx="98" ry="74" fill="#C9862F"/>
+  <ellipse cx="870" cy="536" rx="62" ry="46" fill="#F3D894"/>
+  <ellipse cx="972" cy="560" rx="58" ry="48" fill="#304E3F"/>
+  <circle cx="844" cy="500" r="12" fill="#304E3F"/>
+  <circle cx="936" cy="486" r="10" fill="#FFF4E6"/>
+  <circle cx="968" cy="452" r="30" fill="#F7F0E6"/>
+  <path d="M807 410C842 364 968 364 1004 410" stroke="#D08D2D" stroke-width="12" stroke-linecap="round"/>
+  <rect x="696" y="360" width="154" height="168" rx="24" fill="#FFFDFC"/>
+  <text x="724" y="398" fill="#C46E47" font-size="18" font-family="Arial, sans-serif" letter-spacing="4">FEATURED PLATE</text>
+  <text x="724" y="438" fill="#3B261D" font-size="26" font-family="Georgia, serif">Nasi Lemak</text>
+  <text x="724" y="474" fill="#3B261D" font-size="26" font-family="Georgia, serif">Butter Chicken</text>
+  <rect x="970" y="564" width="176" height="142" rx="26" fill="#3B261D"/>
+  <text x="998" y="596" fill="#E7D8C7" font-size="18" font-family="Arial, sans-serif" letter-spacing="4">CAFE FAVORITE</text>
+  <text x="998" y="636" fill="white" font-size="24" font-family="Georgia, serif">Gula Melaka</text>
+  <text x="998" y="670" fill="white" font-size="24" font-family="Georgia, serif">Cheesecake</text>
+  <defs>
+    <linearGradient id="bg" x1="88" y1="84" x2="1108" y2="732" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F6EBDD"/>
+      <stop offset="1" stop-color="#F3E1C9"/>
+    </linearGradient>
+  </defs>
+</svg>

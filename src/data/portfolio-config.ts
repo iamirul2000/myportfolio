@@ -385,6 +385,33 @@ const developerProjects: Project[] = [
     featured: true
   },
   {
+    title: "Kopi & Dapur",
+    slug: "kopi-dapur",
+    category: ["Web App", "UI/UX"],
+    description: "A modern Malaysian cafe website concept focused on food-first presentation, direct orders, and strong local brand styling.",
+    techStack: ["Frontend Development", "Responsive Design", "Landing Page", "Vercel"],
+    tags: ["Cafe Website", "Landing Page", "Brand Experience"],
+    thumbnail: "/images/projects/kopi-dapur-modern-cafe-template.svg",
+    gallery: ["/images/projects/kopi-dapur-modern-cafe-template.svg"],
+    links: [{ label: "Live Site", href: "https://restaurantstarter.vercel.app/" }],
+    results: [
+      "Created a polished restaurant landing page with a clear visual identity",
+      "Designed around direct ordering and conversion-focused calls to action",
+      "Showcased a warm local cafe aesthetic with mobile-friendly structure"
+    ],
+    overview:
+      "Kopi & Dapur is a modern cafe website concept built to help local food businesses present their brand clearly and encourage more direct customer action.",
+    challenge:
+      "Cafe websites often feel generic or cluttered, which makes it harder to highlight signature dishes, atmosphere, and simple ordering paths.",
+    solution:
+      "I focused the layout around food-first visuals, clean typography, warm local styling, and clear CTAs like WhatsApp ordering and call actions.",
+    impact: [
+      "Stronger first impression for a local cafe brand",
+      "Clearer direct-ordering journey",
+      "More intentional balance between aesthetics and usability"
+    ]
+  },
+  {
     title: "TrackerHero",
     slug: "trackerhero",
     category: "Dashboard",

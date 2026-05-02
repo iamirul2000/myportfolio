@@ -302,6 +302,36 @@ const developerProjects: Project[] = [
     featured: true
   },
   {
+    title: "MoneyPlan Budget Planner",
+    slug: "moneyplan-budget-planner",
+    category: "Mobile App",
+    description: "A personal finance and budget planning mobile application designed to help users track expenses, manage budgets, and achieve financial goals.",
+    techStack: ["Mobile Development", "Budget Planning", "Personal Finance"],
+    tags: ["Finance", "Budget", "Personal Project"],
+    thumbnail: "/images/projects/budget-planner.png",
+    gallery: ["/images/projects/budget-planner.png"],
+    links: [
+      { label: "Buy on Gumroad", href: "https://amiruliman83.gumroad.com/l/moneyplan-budget-planner" }
+    ],
+    results: [
+      "Built a complete budget planning solution from concept to launch",
+      "Published and available for purchase on Gumroad",
+      "Designed for practical personal finance management"
+    ],
+    overview:
+      "MoneyPlan Budget Planner is a personal project built to help users take control of their finances through intuitive budget tracking and expense management. The app focuses on making financial planning accessible and straightforward.",
+    challenge:
+      "Many budget apps are either too complex for everyday use or lack the features needed for effective financial planning. The goal was to create a balanced solution that's both powerful and easy to use.",
+    solution:
+      "I designed and built a mobile application that combines essential budgeting features with a clean, user-friendly interface. The app helps users track expenses, set budget goals, and monitor their financial progress.",
+    impact: [
+      "Created a practical tool for personal finance management",
+      "Successfully launched as a commercial product",
+      "Demonstrated end-to-end product development skills"
+    ],
+    featured: true
+  },
+  {
     title: "PigrimPro",
     slug: "pigrimpro",
     category: ["Web App", "Mobile App"],

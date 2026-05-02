@@ -12,20 +12,21 @@ interface TechItem {
 }
 
 const techStack: TechItem[] = [
-  { name: "Laravel", category: "Backend", level: 90, color: "bg-red-500" },
-  { name: "PHP", category: "Backend", level: 90, color: "bg-indigo-500" },
-  { name: "MySQL", category: "Database", level: 85, color: "bg-blue-500" },
-  { name: "Angular", category: "Frontend", level: 80, color: "bg-red-600" },
-  { name: "TypeScript", category: "Frontend", level: 85, color: "bg-blue-600" },
-  { name: "JavaScript", category: "Frontend", level: 85, color: "bg-yellow-500" },
-  { name: "Flutter", category: "Mobile", level: 75, color: "bg-cyan-500" },
-  { name: "Swift", category: "Mobile", level: 70, color: "bg-orange-500" },
-  { name: "REST APIs", category: "Backend", level: 90, color: "bg-green-500" },
-  { name: "Git", category: "Tools", level: 85, color: "bg-orange-600" },
+  { name: "Laravel", category: "Backend", level: 90, color: "#ef4444" },
+  { name: "PHP", category: "Backend", level: 90, color: "#6366f1" },
+  { name: "MySQL", category: "Database", level: 85, color: "#3b82f6" },
+  { name: "Angular", category: "Frontend", level: 80, color: "#dc2626" },
+  { name: "TypeScript", category: "Frontend", level: 85, color: "#2563eb" },
+  { name: "JavaScript", category: "Frontend", level: 85, color: "#eab308" },
+  { name: "Flutter", category: "Mobile", level: 75, color: "#06b6d4" },
+  { name: "Swift", category: "Mobile", level: 70, color: "#f97316" },
+  { name: "REST APIs", category: "Backend", level: 90, color: "#22c55e" },
+  { name: "Git", category: "Tools", level: 85, color: "#ea580c" },
 ];
 
 export function TechStackVisualizer() {
   const [selectedCategory, setSelectedCategory] = useState<string>("All");
+  const [hoveredTech, setHoveredTech] = useState<string | null>(null);
   const categories = ["All", ...new Set(techStack.map((t) => t.category))];
 
   const filteredTech =
@@ -33,13 +34,31 @@ export function TechStackVisualizer() {
       ? techStack
       : techStack.filter((t) => t.category === selectedCategory);
 
+  // Calculate total for percentage
+  const total = filteredTech.reduce((sum, tech) => sum + tech.level, 0);
+  
+  // Calculate pie chart segments
+  let currentAngle = -90; // Start from top
+  const segments = filteredTech.map((tech) => {
+    const percentage = (tech.level / total) * 100;
+    const angle = (percentage / 100) * 360;
+    const segment = {
+      ...tech,
+      percentage,
+      startAngle: currentAngle,
+      endAngle: currentAngle + angle,
+    };
+    currentAngle += angle;
+    return segment;
+  });
+
   return (
     <section className="section-spacing">
       <div className="container">
         <div className="mb-12 text-center">
           <h2 className="heading-secondary">Technology Stack</h2>
           <p className="body-large mt-4">
-            Interactive visualization of my technical skills and proficiency levels
+            Distribution of my technical skills and proficiency levels
           </p>
         </div>
 
@@ -61,54 +80,141 @@ export function TechStackVisualizer() {
           ))}
         </div>
 
-        {/* Bubble Chart */}
+        {/* Pie Chart */}
         <div className="mx-auto max-w-5xl">
           <Card className="card-spacing">
-            <div className="flex min-h-[400px] flex-wrap items-center justify-center gap-4 p-8">
-              {filteredTech.map((tech) => {
-                const size = tech.level * 1.5; // Scale size based on level
-                return (
-                  <div
-                    key={tech.name}
-                    className="group relative transition-transform hover:scale-110"
-                    style={{
-                      width: `${size}px`,
-                      height: `${size}px`,
-                    }}
+            <div className="flex flex-col items-center gap-8 p-8 lg:flex-row lg:justify-center">
+              {/* SVG Pie Chart */}
+              <div className="relative">
+                <svg
+                  width="320"
+                  height="320"
+                  viewBox="0 0 320 320"
+                  className="transform transition-transform"
+                >
+                  {segments.map((segment, index) => {
+                    const radius = 140;
+                    const centerX = 160;
+                    const centerY = 160;
+                    
+                    // Convert angles to radians
+                    const startRad = (segment.startAngle * Math.PI) / 180;
+                    const endRad = (segment.endAngle * Math.PI) / 180;
+                    
+                    // Calculate arc path
+                    const x1 = centerX + radius * Math.cos(startRad);
+                    const y1 = centerY + radius * Math.sin(startRad);
+                    const x2 = centerX + radius * Math.cos(endRad);
+                    const y2 = centerY + radius * Math.sin(endRad);
+                    
+                    const largeArc = segment.endAngle - segment.startAngle > 180 ? 1 : 0;
+                    
+                    const pathData = [
+                      `M ${centerX} ${centerY}`,
+                      `L ${x1} ${y1}`,
+                      `A ${radius} ${radius} 0 ${largeArc} 1 ${x2} ${y2}`,
+                      'Z'
+                    ].join(' ');
+
+                    const isHovered = hoveredTech === segment.name;
+                    const scale = isHovered ? 1.05 : 1;
+                    
+                    return (
+                      <g
+                        key={segment.name}
+                        onMouseEnter={() => setHoveredTech(segment.name)}
+                        onMouseLeave={() => setHoveredTech(null)}
+                        style={{
+                          transformOrigin: `${centerX}px ${centerY}px`,
+                          transform: `scale(${scale})`,
+                          transition: 'transform 0.2s ease',
+                          cursor: 'pointer',
+                        }}
+                      >
+                        <path
+                          d={pathData}
+                          fill={segment.color}
+                          stroke="white"
+                          strokeWidth="2"
+                          opacity={hoveredTech && !isHovered ? 0.5 : 1}
+                        />
+                      </g>
+                    );
+                  })}
+                  
+                  {/* Center circle for donut effect */}
+                  <circle
+                    cx="160"
+                    cy="160"
+                    r="60"
+                    fill="hsl(var(--background))"
+                    stroke="hsl(var(--border))"
+                    strokeWidth="2"
+                  />
+                  
+                  {/* Center text */}
+                  <text
+                    x="160"
+                    y="155"
+                    textAnchor="middle"
+                    className="fill-foreground text-sm font-semibold"
                   >
+                    {selectedCategory}
+                  </text>
+                  <text
+                    x="160"
+                    y="175"
+                    textAnchor="middle"
+                    className="fill-muted-foreground text-xs"
+                  >
+                    {filteredTech.length} skills
+                  </text>
+                </svg>
+              </div>
+
+              {/* Legend */}
+              <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-1">
+                {segments.map((segment) => {
+                  const isHovered = hoveredTech === segment.name;
+                  return (
                     <div
+                      key={segment.name}
+                      onMouseEnter={() => setHoveredTech(segment.name)}
+                      onMouseLeave={() => setHoveredTech(null)}
                       className={cn(
-                        "flex h-full w-full items-center justify-center rounded-full shadow-lg transition-all group-hover:shadow-2xl",
-                        tech.color
+                        "flex items-center gap-3 rounded-lg border border-border/50 bg-muted/30 p-3 transition-all cursor-pointer",
+                        isHovered && "border-primary/50 bg-primary/5 shadow-md"
                       )}
                     >
-                      <span className="text-center text-xs font-bold text-white">
-                        {tech.name}
-                      </span>
+                      <div
+                        className="h-4 w-4 rounded-sm"
+                        style={{ backgroundColor: segment.color }}
+                      />
+                      <div className="flex-1">
+                        <p className="text-sm font-medium">{segment.name}</p>
+                        <p className="text-xs text-muted-foreground">
+                          {segment.category}
+                        </p>
+                      </div>
+                      <div className="text-right">
+                        <p className="text-sm font-semibold">
+                          {segment.percentage.toFixed(1)}%
+                        </p>
+                        <p className="text-xs text-muted-foreground">
+                          {segment.level}% skill
+                        </p>
+                      </div>
                     </div>
-                    
-                    {/* Tooltip */}
-                    <div className="pointer-events-none absolute -top-12 left-1/2 -translate-x-1/2 whitespace-nowrap rounded-lg bg-slate-900 px-3 py-2 text-xs text-white opacity-0 transition-opacity group-hover:opacity-100 dark:bg-slate-100 dark:text-slate-900">
-                      {tech.category} • {tech.level}% proficiency
-                      <div className="absolute left-1/2 top-full h-0 w-0 -translate-x-1/2 border-4 border-transparent border-t-slate-900 dark:border-t-slate-100" />
-                    </div>
-                  </div>
-                );
-              })}
+                  );
+                })}
+              </div>
             </div>
           </Card>
         </div>
 
-        {/* Legend */}
-        <div className="mt-8 flex flex-wrap justify-center gap-4 text-sm text-muted-foreground">
-          <div className="flex items-center gap-2">
-            <div className="h-3 w-3 rounded-full bg-gradient-to-r from-red-500 to-orange-500" />
-            <span>Larger = Higher Proficiency</span>
-          </div>
-          <div className="flex items-center gap-2">
-            <div className="h-3 w-3 rounded-full bg-gradient-to-r from-blue-500 to-cyan-500" />
-            <span>Hover for Details</span>
-          </div>
+        {/* Info */}
+        <div className="mt-8 text-center text-sm text-muted-foreground">
+          Hover over segments to highlight • Percentages based on proficiency levels
         </div>
       </div>
     </section>

@@ -7,10 +7,6 @@ import { getActivePersona } from "@/data/portfolio-config";
 export function TestimonialsSection() {
   const persona = getActivePersona();
 
-  if (persona.testimonials.length === 0) {
-    return null;
-  }
-
   return (
     <section className="py-16">
       <div className="container space-y-8">

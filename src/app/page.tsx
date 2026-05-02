@@ -4,11 +4,12 @@ import { HeroSection } from "@/components/hero-section";
 import { ProjectsGrid } from "@/components/projects-grid";
 import { ServicesPreview } from "@/components/services-preview";
 import { SkillsSection } from "@/components/skills-section";
-import { TestimonialsSection } from "@/components/testimonials-section";
+import { TestimonialsEnhanced } from "@/components/testimonials-enhanced";
+import { TechStackVisualizer } from "@/components/tech-stack-visualizer";
 import { Timeline } from "@/components/timeline";
 import { TrustedBy } from "@/components/trusted-by";
 import { PersonStructuredData, WebsiteStructuredData } from "@/components/structured-data";
-import { portfolioConfig } from "@/data/portfolio-config";
+import { portfolioConfig, getActivePersona } from "@/data/portfolio-config";
 import { buildMetadata } from "@/lib/metadata";
 
 export const metadata = buildMetadata({
@@ -18,6 +19,8 @@ export const metadata = buildMetadata({
 });
 
 export default function HomePage() {
+  const persona = getActivePersona();
+  
   return (
     <>
       <PersonStructuredData />
@@ -25,9 +28,12 @@ export default function HomePage() {
       <HeroSection />
       <TrustedBy />
       <ProjectsGrid featuredOnly />
+      <TechStackVisualizer />
       <SkillsSection />
       <ServicesPreview />
-      <TestimonialsSection />
+      {persona.testimonials && persona.testimonials.length > 0 && (
+        <TestimonialsEnhanced testimonials={persona.testimonials} />
+      )}
       <Timeline />
       {portfolioConfig.homepage.showFaq ? <FaqSection /> : null}
       <CtaBanner />

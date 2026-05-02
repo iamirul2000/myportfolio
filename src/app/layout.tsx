@@ -7,6 +7,8 @@ import { SiteHeader } from "@/components/site-header";
 import { ThemeProvider } from "@/components/providers/theme-provider";
 import { FloatingCTA } from "@/components/floating-cta";
 import { BackToTop } from "@/components/back-to-top";
+import { CommandPalette } from "@/components/command-palette";
+import { MobileBottomNav } from "@/components/mobile-bottom-nav";
 import { portfolioConfig } from "@/data/portfolio-config";
 
 import "./globals.css";
@@ -36,12 +38,14 @@ export default function RootLayout({ children }: Readonly<{ children: ReactNode 
     <html lang="en" suppressHydrationWarning>
       <body className={`${fontSans.variable} min-h-screen font-sans`}>
         <ThemeProvider attribute="class" defaultTheme={portfolioConfig.theme.defaultMode} enableSystem>
-          <div className="relative flex min-h-screen flex-col">
+          <div className="relative flex min-h-screen flex-col pb-16 md:pb-0">
             <SiteHeader />
             <main className="flex-1">{children}</main>
             <SiteFooter />
             <FloatingCTA />
             <BackToTop />
+            <CommandPalette />
+            <MobileBottomNav />
           </div>
         </ThemeProvider>
       </body>

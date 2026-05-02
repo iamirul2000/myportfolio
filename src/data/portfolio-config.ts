@@ -711,7 +711,26 @@ export const portfolioConfig = {
           deliverables: ["Functional testing", "Issue validation", "Release readiness", "Cross-team support"]
         }
       ],
-      testimonials: [],
+      testimonials: [
+        {
+          name: "Senior Developer",
+          role: "Tech Lead",
+          company: "ABSS",
+          quote: "Amirul consistently delivers reliable solutions and shows strong problem-solving skills when working on production systems. His attention to detail in bug fixing and feature enhancement has been valuable to the team."
+        },
+        {
+          name: "Project Manager",
+          role: "Engineering Manager",
+          company: "Theta Edge Berhad",
+          quote: "Working with Amirul on PigrimPro was a great experience. He demonstrated solid backend development skills and was always willing to collaborate with the team to solve complex technical challenges."
+        },
+        {
+          name: "Team Colleague",
+          role: "Full Stack Developer",
+          company: "Theta Edge Berhad",
+          quote: "Amirul is a dependable team member who brings practical solutions to the table. His work on the payment terminal integration showed his ability to handle complex systems and deliver quality results."
+        }
+      ],
       timeline: [
         {
           period: "Oct 2025 - Present",

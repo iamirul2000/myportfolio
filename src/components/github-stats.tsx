@@ -1,6 +1,7 @@
 "use client";
 
 import { Card } from "@/components/ui/card";
+import { ErrorMessage } from "@/components/error-message";
 import { useEffect, useState } from "react";
 
 interface GitHubStats {
@@ -12,10 +13,17 @@ interface GitHubStats {
 export function GitHubStats() {
   const [stats, setStats] = useState<GitHubStats | null>(null);
   const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
 
-  useEffect(() => {
+  const fetchStats = () => {
+    setLoading(true);
+    setError(null);
+    
     fetch("https://api.github.com/users/iamirul2000")
-      .then((res) => res.json())
+      .then((res) => {
+        if (!res.ok) throw new Error("Failed to fetch GitHub stats");
+        return res.json();
+      })
       .then((data) => {
         setStats({
           repos: data.public_repos || 0,
@@ -24,23 +32,38 @@ export function GitHubStats() {
         });
         setLoading(false);
       })
-      .catch(() => {
+      .catch((err) => {
+        setError(err.message);
         setLoading(false);
       });
+  };
+
+  useEffect(() => {
+    fetchStats();
   }, []);
 
   if (loading) {
     return (
       <Card className="animate-pulse">
-        <div className="h-32 bg-muted/50" />
+        <div className="h-48 bg-muted/50 rounded-lg" />
       </Card>
+    );
+  }
+
+  if (error) {
+    return (
+      <ErrorMessage
+        title="Failed to load GitHub stats"
+        message={error}
+        retry={fetchStats}
+      />
     );
   }
 
   if (!stats) return null;
 
   return (
-    <Card className="overflow-hidden">
+    <Card className="overflow-hidden transition-smooth hover:shadow-lg">
       <div className="flex items-center gap-3 border-b border-border pb-4">
         <svg
           className="h-8 w-8"
@@ -60,7 +83,7 @@ export function GitHubStats() {
             href="https://github.com/iamirul2000"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-sm text-muted-foreground hover:text-primary"
+            className="text-sm text-muted-foreground transition-colors hover:text-primary focus-ring rounded"
           >
             @iamirul2000
           </a>
@@ -84,7 +107,7 @@ export function GitHubStats() {
         href="https://github.com/iamirul2000"
         target="_blank"
         rel="noopener noreferrer"
-        className="mt-4 block rounded-lg bg-muted/50 py-2 text-center text-sm font-medium transition hover:bg-muted"
+        className="mt-4 block rounded-lg bg-muted/50 py-2 text-center text-sm font-medium transition-smooth hover:bg-muted focus-ring"
       >
         View GitHub Profile →
       </a>

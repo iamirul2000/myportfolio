@@ -2,6 +2,7 @@
 
 import { useMemo, useState } from "react";
 import { ProjectCard } from "@/components/project-card";
+import { EmptyState } from "@/components/empty-state";
 import type { Project } from "@/data/portfolio-config";
 import { cn } from "@/lib/utils";
 
@@ -204,22 +205,19 @@ export function ProjectTypeFilter({ companyProjects, personalProjects }: Project
       </div>
 
       {filteredProjects.length === 0 && (
-        <div className="rounded-3xl border border-dashed border-border p-12 text-center text-muted-foreground">
-          <p className="text-lg font-medium">No projects found</p>
-          <p className="mt-2 text-sm">
-            Try adjusting your filters or search query
-          </p>
-          <button
-            onClick={() => {
+        <EmptyState
+          icon="🔍"
+          title="No projects found"
+          description="Try adjusting your filters or search query to find what you're looking for."
+          action={{
+            label: "Clear all filters",
+            onClick: () => {
               setSearchQuery("");
               setActiveCategory("All");
               setActiveType("all");
-            }}
-            className="mt-4 rounded-full border border-primary px-4 py-2 text-sm text-primary hover:bg-primary hover:text-primary-foreground"
-          >
-            Clear all filters
-          </button>
-        </div>
+            },
+          }}
+        />
       )}
     </div>
   );

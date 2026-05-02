@@ -18,17 +18,17 @@ export function ProjectBadges({
   return (
     <div className={cn("flex flex-wrap gap-2", className)}>
       {featured && (
-        <span className="inline-flex items-center gap-1 rounded-full bg-amber-500/10 px-2.5 py-1 text-xs font-medium text-amber-600 dark:text-amber-400">
+        <span className="inline-flex items-center gap-1 rounded-full bg-amber-500/90 px-2.5 py-1 text-xs font-medium text-white shadow-lg backdrop-blur-sm dark:bg-amber-500/80">
           ⭐ Featured
         </span>
       )}
       {isPersonal && (
-        <span className="inline-flex items-center gap-1 rounded-full bg-blue-500/10 px-2.5 py-1 text-xs font-medium text-blue-600 dark:text-blue-400">
+        <span className="inline-flex items-center gap-1 rounded-full bg-blue-500/90 px-2.5 py-1 text-xs font-medium text-white shadow-lg backdrop-blur-sm dark:bg-blue-500/80">
           🚀 Personal
         </span>
       )}
       {isLatest && (
-        <span className="inline-flex items-center gap-1 rounded-full bg-green-500/10 px-2.5 py-1 text-xs font-medium text-green-600 dark:text-green-400">
+        <span className="inline-flex items-center gap-1 rounded-full bg-green-500/90 px-2.5 py-1 text-xs font-medium text-white shadow-lg backdrop-blur-sm dark:bg-green-500/80">
           ✨ Latest
         </span>
       )}

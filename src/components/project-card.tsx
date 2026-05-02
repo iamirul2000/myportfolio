@@ -24,13 +24,15 @@ export function ProjectCard({ project, isPersonal, isLatest }: ProjectCardProps)
           height={800}
           className="aspect-[16/11] h-auto w-full object-cover transition duration-500 group-hover:scale-[1.02]"
         />
-        <div className="absolute left-3 top-3">
-          <ProjectBadges
-            featured={project.featured}
-            isPersonal={isPersonal}
-            isLatest={isLatest}
-          />
-        </div>
+        {(project.featured || isPersonal || isLatest) && (
+          <div className="absolute left-0 right-0 top-0 bg-gradient-to-b from-black/40 to-transparent p-3">
+            <ProjectBadges
+              featured={project.featured}
+              isPersonal={isPersonal}
+              isLatest={isLatest}
+            />
+          </div>
+        )}
       </div>
       <div className="mt-5 space-y-3">
         <div className="flex items-start justify-between gap-4">

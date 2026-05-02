@@ -3,13 +3,20 @@ import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 
 import type { Project } from "@/data/portfolio-config";
+import { ProjectBadges } from "@/components/project-badges";
 
-export function ProjectCard({ project }: { project: Project }) {
+interface ProjectCardProps {
+  project: Project;
+  isPersonal?: boolean;
+  isLatest?: boolean;
+}
+
+export function ProjectCard({ project, isPersonal, isLatest }: ProjectCardProps) {
   const categories = Array.isArray(project.category) ? project.category : [project.category];
 
   return (
     <Link href={`/projects/${project.slug}`} className="group block rounded-3xl border border-border/70 bg-background/70 p-4 transition duration-300 hover:-translate-y-1 hover:shadow-soft">
-      <div className="overflow-hidden rounded-[1.25rem] border border-border/70 bg-muted/40">
+      <div className="relative overflow-hidden rounded-[1.25rem] border border-border/70 bg-muted/40">
         <Image
           src={project.thumbnail}
           alt={project.title}
@@ -17,6 +24,13 @@ export function ProjectCard({ project }: { project: Project }) {
           height={800}
           className="aspect-[16/11] h-auto w-full object-cover transition duration-500 group-hover:scale-[1.02]"
         />
+        <div className="absolute left-3 top-3">
+          <ProjectBadges
+            featured={project.featured}
+            isPersonal={isPersonal}
+            isLatest={isLatest}
+          />
+        </div>
       </div>
       <div className="mt-5 space-y-3">
         <div className="flex items-start justify-between gap-4">
@@ -28,11 +42,16 @@ export function ProjectCard({ project }: { project: Project }) {
         </div>
         <p className="text-sm leading-6 text-muted-foreground">{project.description}</p>
         <div className="flex flex-wrap gap-2">
-          {project.tags.map((tag) => (
+          {project.tags.slice(0, 3).map((tag) => (
             <span key={tag} className="rounded-full bg-muted px-3 py-1 text-xs text-muted-foreground">
               {tag}
             </span>
           ))}
+          {project.tags.length > 3 && (
+            <span className="rounded-full bg-muted px-3 py-1 text-xs text-muted-foreground">
+              +{project.tags.length - 3} more
+            </span>
+          )}
         </div>
       </div>
     </Link>

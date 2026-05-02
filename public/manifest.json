@@ -1,0 +1,25 @@
+{
+  "name": "Amirul Iman Portfolio",
+  "short_name": "Amirul Iman",
+  "description": "Full stack web software engineer portfolio showcasing projects and experience",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#0ea5e9",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/icon-v2.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/apple-icon-v2.svg",
+      "sizes": "180x180",
+      "type": "image/svg+xml"
+    }
+  ],
+  "categories": ["portfolio", "developer", "technology"],
+  "screenshots": []
+}

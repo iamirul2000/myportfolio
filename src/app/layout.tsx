@@ -5,6 +5,8 @@ import { Plus_Jakarta_Sans } from "next/font/google";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
 import { ThemeProvider } from "@/components/providers/theme-provider";
+import { FloatingCTA } from "@/components/floating-cta";
+import { BackToTop } from "@/components/back-to-top";
 import { portfolioConfig } from "@/data/portfolio-config";
 
 import "./globals.css";
@@ -38,6 +40,8 @@ export default function RootLayout({ children }: Readonly<{ children: ReactNode 
             <SiteHeader />
             <main className="flex-1">{children}</main>
             <SiteFooter />
+            <FloatingCTA />
+            <BackToTop />
           </div>
         </ThemeProvider>
       </body>

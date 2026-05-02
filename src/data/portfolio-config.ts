@@ -861,6 +861,14 @@ export function getAllProjects() {
   return getActivePersona().projects;
 }
 
+export function getCompanyProjects() {
+  return companyProjects;
+}
+
+export function getPersonalProjects() {
+  return personalProjects;
+}
+
 export function getProjectBySlug(slug: string) {
   return getAllProjects().find((project) => project.slug === slug);
 }

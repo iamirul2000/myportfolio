@@ -5,6 +5,8 @@ import { ArrowUpRight } from "lucide-react";
 
 import { PageHero } from "@/components/page-hero";
 import { Card } from "@/components/ui/card";
+import { RelatedProjects } from "@/components/related-projects";
+import { ProjectStructuredData } from "@/components/structured-data";
 import { getProjectBySlug } from "@/data/portfolio-config";
 import { buildMetadata } from "@/lib/metadata";
 
@@ -36,6 +38,7 @@ export default async function ProjectDetailPage({ params }: { params: Promise<{ 
 
   return (
     <>
+      <ProjectStructuredData project={project} />
       <PageHero eyebrow={categories.join(" / ")} title={project.title} description={project.description} />
       <section className="pb-16">
         <div className="container grid gap-8 lg:grid-cols-[1.2fr_0.8fr] lg:items-start">
@@ -57,6 +60,17 @@ export default async function ProjectDetailPage({ params }: { params: Promise<{ 
               <div>
                 <h3 className="text-xl font-semibold">Solution</h3>
                 <p className="mt-3 text-sm leading-7 text-muted-foreground sm:text-base">{project.solution}</p>
+              </div>
+              <div>
+                <h3 className="text-xl font-semibold">Impact</h3>
+                <ul className="mt-3 space-y-2 text-sm leading-7 text-muted-foreground sm:text-base">
+                  {project.impact.map((item) => (
+                    <li key={item} className="flex gap-2">
+                      <span className="text-primary">✓</span>
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
               </div>
             </Card>
           </div>
@@ -93,6 +107,7 @@ export default async function ProjectDetailPage({ params }: { params: Promise<{ 
           </div>
         </div>
       </section>
+      <RelatedProjects currentProject={project} />
     </>
   );
 }

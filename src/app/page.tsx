@@ -7,6 +7,7 @@ import { SkillsSection } from "@/components/skills-section";
 import { TestimonialsSection } from "@/components/testimonials-section";
 import { Timeline } from "@/components/timeline";
 import { TrustedBy } from "@/components/trusted-by";
+import { PersonStructuredData, WebsiteStructuredData } from "@/components/structured-data";
 import { portfolioConfig } from "@/data/portfolio-config";
 import { buildMetadata } from "@/lib/metadata";
 
@@ -19,6 +20,8 @@ export const metadata = buildMetadata({
 export default function HomePage() {
   return (
     <>
+      <PersonStructuredData />
+      <WebsiteStructuredData />
       <HeroSection />
       <TrustedBy />
       <ProjectsGrid featuredOnly />

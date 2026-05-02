@@ -1,5 +1,7 @@
 import { PageHero } from "@/components/page-hero";
 import { Card } from "@/components/ui/card";
+import { GitHubStats } from "@/components/github-stats";
+import { SkillBars } from "@/components/skill-bars";
 import { getActivePersona } from "@/data/portfolio-config";
 import { buildMetadata } from "@/lib/metadata";
 
@@ -46,9 +48,11 @@ export default function AboutPage() {
                 ))}
               </div>
             </Card>
+            <GitHubStats />
           </div>
         </div>
       </section>
+      <SkillBars />
     </>
   );
 }

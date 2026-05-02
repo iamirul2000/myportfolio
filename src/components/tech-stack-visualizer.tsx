@@ -12,16 +12,16 @@ interface TechItem {
 }
 
 const techStack: TechItem[] = [
-  { name: "Laravel", category: "Backend", level: 90, color: "#ef4444" },
-  { name: "PHP", category: "Backend", level: 90, color: "#6366f1" },
-  { name: "MySQL", category: "Database", level: 85, color: "#3b82f6" },
-  { name: "Angular", category: "Frontend", level: 80, color: "#dc2626" },
-  { name: "TypeScript", category: "Frontend", level: 85, color: "#2563eb" },
-  { name: "JavaScript", category: "Frontend", level: 85, color: "#eab308" },
-  { name: "Flutter", category: "Mobile", level: 75, color: "#06b6d4" },
-  { name: "Swift", category: "Mobile", level: 70, color: "#f97316" },
-  { name: "REST APIs", category: "Backend", level: 90, color: "#22c55e" },
-  { name: "Git", category: "Tools", level: 85, color: "#ea580c" },
+  { name: "Laravel", category: "Backend", level: 90, color: "#f87171" },
+  { name: "PHP", category: "Backend", level: 90, color: "#818cf8" },
+  { name: "MySQL", category: "Database", level: 85, color: "#60a5fa" },
+  { name: "Angular", category: "Frontend", level: 80, color: "#fb7185" },
+  { name: "TypeScript", category: "Frontend", level: 85, color: "#3b82f6" },
+  { name: "JavaScript", category: "Frontend", level: 85, color: "#fbbf24" },
+  { name: "Flutter", category: "Mobile", level: 75, color: "#22d3ee" },
+  { name: "Swift", category: "Mobile", level: 70, color: "#fb923c" },
+  { name: "REST APIs", category: "Backend", level: 90, color: "#4ade80" },
+  { name: "Git", category: "Tools", level: 85, color: "#f97316" },
 ];
 
 export function TechStackVisualizer() {
@@ -81,9 +81,9 @@ export function TechStackVisualizer() {
         </div>
 
         {/* Pie Chart */}
-        <div className="mx-auto max-w-5xl">
+        <div className="mx-auto max-w-6xl">
           <Card className="card-spacing">
-            <div className="flex flex-col items-center gap-8 p-8 lg:flex-row lg:justify-center">
+            <div className="flex flex-col items-center gap-8 p-8 lg:gap-12">
               {/* SVG Pie Chart */}
               <div className="relative">
                 <svg
@@ -173,7 +173,7 @@ export function TechStackVisualizer() {
               </div>
 
               {/* Legend */}
-              <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-1">
+              <div className="grid w-full max-w-2xl gap-3 sm:grid-cols-2">
                 {segments.map((segment) => {
                   const isHovered = hoveredTech === segment.name;
                   return (
@@ -182,21 +182,23 @@ export function TechStackVisualizer() {
                       onMouseEnter={() => setHoveredTech(segment.name)}
                       onMouseLeave={() => setHoveredTech(null)}
                       className={cn(
-                        "flex items-center gap-3 rounded-lg border border-border/50 bg-muted/30 p-3 transition-all cursor-pointer",
-                        isHovered && "border-primary/50 bg-primary/5 shadow-md"
+                        "flex items-center gap-3 rounded-lg border p-3 transition-all cursor-pointer",
+                        isHovered 
+                          ? "border-primary/30 bg-primary/5 shadow-md scale-[1.02]" 
+                          : "border-border/30 bg-card/50 hover:bg-card/80"
                       )}
                     >
                       <div
-                        className="h-4 w-4 rounded-sm"
+                        className="h-4 w-4 flex-shrink-0 rounded-sm shadow-sm"
                         style={{ backgroundColor: segment.color }}
                       />
-                      <div className="flex-1">
-                        <p className="text-sm font-medium">{segment.name}</p>
+                      <div className="flex-1 min-w-0">
+                        <p className="text-sm font-medium truncate">{segment.name}</p>
                         <p className="text-xs text-muted-foreground">
                           {segment.category}
                         </p>
                       </div>
-                      <div className="text-right">
+                      <div className="text-right flex-shrink-0">
                         <p className="text-sm font-semibold">
                           {segment.percentage.toFixed(1)}%
                         </p>

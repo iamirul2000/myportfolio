@@ -269,7 +269,8 @@ const sharedCaseStudies: CaseStudy[] = [
   }
 ];
 
-const developerProjects: Project[] = [
+// Company Projects
+const companyProjects: Project[] = [
   {
     title: "Financio",
     slug: "financio",
@@ -298,36 +299,6 @@ const developerProjects: Project[] = [
       "Improved reliability across existing product flows",
       "Supported continuous delivery through focused, low-risk changes",
       "Helped maintain a stable production experience for business users"
-    ],
-    featured: true
-  },
-  {
-    title: "MoneyPlan Budget Planner",
-    slug: "moneyplan-budget-planner",
-    category: "Mobile App",
-    description: "A personal finance and budget planning mobile application designed to help users track expenses, manage budgets, and achieve financial goals.",
-    techStack: ["Mobile Development", "Budget Planning", "Personal Finance"],
-    tags: ["Finance", "Budget", "Personal Project"],
-    thumbnail: "/images/projects/budget-planner.png",
-    gallery: ["/images/projects/budget-planner.png"],
-    links: [
-      { label: "Buy on Gumroad", href: "https://amiruliman83.gumroad.com/l/moneyplan-budget-planner" }
-    ],
-    results: [
-      "Built a complete budget planning solution from concept to launch",
-      "Published and available for purchase on Gumroad",
-      "Designed for practical personal finance management"
-    ],
-    overview:
-      "MoneyPlan Budget Planner is a personal project built to help users take control of their finances through intuitive budget tracking and expense management. The app focuses on making financial planning accessible and straightforward.",
-    challenge:
-      "Many budget apps are either too complex for everyday use or lack the features needed for effective financial planning. The goal was to create a balanced solution that's both powerful and easy to use.",
-    solution:
-      "I designed and built a mobile application that combines essential budgeting features with a clean, user-friendly interface. The app helps users track expenses, set budget goals, and monitor their financial progress.",
-    impact: [
-      "Created a practical tool for personal finance management",
-      "Successfully launched as a commercial product",
-      "Demonstrated end-to-end product development skills"
     ],
     featured: true
   },
@@ -415,6 +386,67 @@ const developerProjects: Project[] = [
     featured: true
   },
   {
+    title: "TrackerHero",
+    slug: "trackerhero",
+    category: "Dashboard",
+    description: "Backend internship experience covering technical support, testing, issue validation, and client-aware delivery on active product work.",
+    techStack: ["Backend Support", "Testing", "Laravel", "PHP", "Postman"],
+    tags: ["Internship", "Backend", "QA"],
+    thumbnail: "/images/projects/trackerhero-backend-internship.svg",
+    gallery: ["/images/projects/trackerhero-backend-internship.svg"],
+    links: [{ label: "Resume", href: "/resume" }],
+    results: [
+      "Supported developers with technical tasks and quality-focused checks",
+      "Helped keep work aligned with client requirements and feedback",
+      "Tested application flows from both user and admin perspectives before release"
+    ],
+    overview:
+      "During my internship at TrackerHero, I supported backend-related work while learning how testing, issue validation, communication, and delivery all connect in a live product team.",
+    challenge:
+      "The role required balancing technical support with quality checks, progress tracking, and communication around active client-facing work.",
+    solution:
+      "I supported developers with technical assistance, helped validate application behavior, identified issues before release, and kept progress aligned with client needs and project requirements.",
+    impact: [
+      "Strengthened my foundation in backend team workflows",
+      "Improved my understanding of testing and release-readiness work",
+      "Built early experience in client-aware software delivery"
+    ]
+  }
+];
+
+// Personal Projects
+const personalProjects: Project[] = [
+  {
+    title: "MoneyPlan Budget Planner",
+    slug: "moneyplan-budget-planner",
+    category: "Web App",
+    description: "A personal finance and budget planning web application designed to help users track expenses, manage budgets, and achieve financial goals.",
+    techStack: ["Web Development", "Budget Planning", "Personal Finance"],
+    tags: ["Finance", "Budget", "Personal Project"],
+    thumbnail: "/images/projects/budget-planner.png",
+    gallery: ["/images/projects/budget-planner.png"],
+    links: [
+      { label: "Buy on Gumroad", href: "https://amiruliman83.gumroad.com/l/moneyplan-budget-planner" }
+    ],
+    results: [
+      "Built a complete budget planning solution from concept to launch",
+      "Published and available for purchase on Gumroad",
+      "Designed for practical personal finance management"
+    ],
+    overview:
+      "MoneyPlan Budget Planner is a personal project built to help users take control of their finances through intuitive budget tracking and expense management. The app focuses on making financial planning accessible and straightforward.",
+    challenge:
+      "Many budget apps are either too complex for everyday use or lack the features needed for effective financial planning. The goal was to create a balanced solution that's both powerful and easy to use.",
+    solution:
+      "I designed and built a web application that combines essential budgeting features with a clean, user-friendly interface. The app helps users track expenses, set budget goals, and monitor their financial progress.",
+    impact: [
+      "Created a practical tool for personal finance management",
+      "Successfully launched as a commercial product",
+      "Demonstrated end-to-end product development skills"
+    ],
+    featured: true
+  },
+  {
     title: "RestaurantStarter",
     slug: "restaurant-starter",
     category: ["Web App", "UI/UX"],
@@ -450,11 +482,11 @@ const developerProjects: Project[] = [
     tags: ["Workshop Management", "Billing", "Inventory"],
     thumbnail: "/images/projects/workshopflow-cover.svg",
     gallery: ["/images/projects/workshopflow-operations-dashboard.svg"],
-    links: [{ label: "Live Site", href: "https://workshopflow-production.up.railway.app/login" }],
+    links: [{ label: "Contact", href: "/contact" }],
     results: [
       "Organized core workshop operations into one admin-facing product flow",
       "Built a clearer product direction around jobs, technicians, inventory, and billing",
-      "Deployed a live version for real-world access and iteration"
+      "Developed a comprehensive admin workspace for workshop management"
     ],
     overview:
       "WorkshopFlow is a personal web application built around the day-to-day workflow of a repair workshop. From the current product direction, it brings together customer handling, job tracking, technician assignment, inventory, and billing inside one admin workspace.",
@@ -468,35 +500,11 @@ const developerProjects: Project[] = [
       "Added another practical product build to the portfolio beyond maintenance-heavy work"
     ],
     featured: true
-  },
-  {
-    title: "TrackerHero",
-    slug: "trackerhero",
-    category: "Dashboard",
-    description: "Backend internship experience covering technical support, testing, issue validation, and client-aware delivery on active product work.",
-    techStack: ["Backend Support", "Testing", "Laravel", "PHP", "Postman"],
-    tags: ["Internship", "Backend", "QA"],
-    thumbnail: "/images/projects/trackerhero-backend-internship.svg",
-    gallery: ["/images/projects/trackerhero-backend-internship.svg"],
-    links: [{ label: "Resume", href: "/resume" }],
-    results: [
-      "Supported developers with technical tasks and quality-focused checks",
-      "Helped keep work aligned with client requirements and feedback",
-      "Tested application flows from both user and admin perspectives before release"
-    ],
-    overview:
-      "During my internship at TrackerHero, I supported backend-related work while learning how testing, issue validation, communication, and delivery all connect in a live product team.",
-    challenge:
-      "The role required balancing technical support with quality checks, progress tracking, and communication around active client-facing work.",
-    solution:
-      "I supported developers with technical assistance, helped validate application behavior, identified issues before release, and kept progress aligned with client needs and project requirements.",
-    impact: [
-      "Strengthened my foundation in backend team workflows",
-      "Improved my understanding of testing and release-readiness work",
-      "Built early experience in client-aware software delivery"
-    ]
   }
 ];
+
+// Combine all developer projects
+const developerProjects: Project[] = [...companyProjects, ...personalProjects];
 
 export const portfolioConfig = {
   siteName: "Amirul Iman Portfolio",

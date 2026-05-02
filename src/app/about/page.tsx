@@ -19,14 +19,17 @@ export default function AboutPage() {
       <PageHero eyebrow="About" title={`About ${persona.label}`} description={persona.shortBio} />
       <section className="pb-16">
         <div className="container grid gap-6 lg:grid-cols-[1fr_0.9fr]">
-          <Card className="space-y-5">
-            <h2 className="text-2xl font-semibold">Engineering summary</h2>
-            {persona.longBio.map((paragraph) => (
-              <p key={paragraph} className="text-sm leading-7 text-muted-foreground sm:text-base">
-                {paragraph}
-              </p>
-            ))}
-          </Card>
+          <div className="space-y-6">
+            <Card className="space-y-5">
+              <h2 className="text-2xl font-semibold">Engineering summary</h2>
+              {persona.longBio.map((paragraph) => (
+                <p key={paragraph} className="text-sm leading-7 text-muted-foreground sm:text-base">
+                  {paragraph}
+                </p>
+              ))}
+            </Card>
+            <GitHubStats />
+          </div>
           <div className="grid gap-6">
             <Card>
               <h3 className="text-xl font-semibold">Skills</h3>
@@ -48,7 +51,6 @@ export default function AboutPage() {
                 ))}
               </div>
             </Card>
-            <GitHubStats />
           </div>
         </div>
       </section>

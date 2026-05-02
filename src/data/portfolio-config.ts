@@ -752,7 +752,7 @@ export const portfolioConfig = {
       accentStyle: "ocean",
       heroVariant: "split",
       cardStyle: "glass",
-      resumeFile: "/resume/amirul-iman-resume.pdf"
+      resumeFile: "/resume/amirul-resume-ats.pdf"
     },
     agency: {
       label: "Northline Studio",

@@ -23,7 +23,7 @@ export function ResumeDownloadCTA() {
         </p>
         <div className="flex flex-col gap-3 sm:flex-row sm:justify-center">
           <a
-            href="/resume/amirul-iman-resume.pdf"
+            href="/resume/amirul-resume-ats.pdf"
             download
             onClick={handleDownload}
           >

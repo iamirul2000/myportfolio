@@ -49,7 +49,7 @@ export function FloatingCTA() {
             className="flex items-center gap-3 rounded-full bg-background px-4 py-3 text-sm font-medium shadow-lg transition hover:scale-105 hover:bg-primary hover:text-primary-foreground"
           >
             <span>💬</span>
-            <span>Let's Talk</span>
+            <span>Let&apos;s Talk</span>
           </Link>
 
           <Link

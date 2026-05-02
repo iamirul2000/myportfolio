@@ -60,14 +60,14 @@ export function QuickContactModal({ isOpen, onClose }: QuickContactModalProps) {
               <div className="text-6xl">✓</div>
               <h3 className="mt-4 text-2xl font-bold">Message Sent!</h3>
               <p className="mt-2 text-muted-foreground">
-                I'll get back to you soon.
+                I&apos;ll get back to you soon.
               </p>
             </div>
           ) : (
             <>
               <h3 className="text-2xl font-bold">Quick Contact</h3>
               <p className="mt-2 text-sm text-muted-foreground">
-                Send me a message and I'll respond as soon as possible
+                Send me a message and I&apos;ll respond as soon as possible
               </p>
 
               <form onSubmit={handleSubmit} className="mt-6 space-y-4">

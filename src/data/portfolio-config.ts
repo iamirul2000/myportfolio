@@ -480,8 +480,8 @@ const personalProjects: Project[] = [
     description: "Personal workshop operations app focused on customers, jobs, technicians, inventory, and billing in a cleaner admin workflow.",
     techStack: ["Web Application", "Admin Dashboard", "Operations Workflow", "Railway"],
     tags: ["Workshop Management", "Billing", "Inventory"],
-    thumbnail: "/images/projects/workshopflow-operations-dashboard.svg",
-    gallery: ["/images/projects/workshopflow-operations-dashboard.svg"],
+    thumbnail: "/images/projects/workshopflow-operations-dashboard.png",
+    gallery: ["/images/projects/workshopflow-operations-dashboard.png"],
     links: [{ label: "Contact", href: "/contact" }],
     results: [
       "Organized core workshop operations into one admin-facing product flow",

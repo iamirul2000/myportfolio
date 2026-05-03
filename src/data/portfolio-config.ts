@@ -483,7 +483,7 @@ const personalProjects: Project[] = [
     tags: ["Workshop Management", "Billing", "Inventory"],
     thumbnail: "/images/projects/workshopflow-operations-dashboard.png",
     gallery: ["/images/projects/workshopflow-operations-dashboard.png"],
-    links: [{ label: "Contact", href: "/contact" }],
+    links: [{ label: "Try Demo", href: "/demo/workshopflow" }, { label: "Contact", href: "/contact" }],
     results: [
       "Organized core workshop operations into one admin-facing product flow",
       "Built a clearer product direction around jobs, technicians, inventory, and billing",

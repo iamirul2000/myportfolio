@@ -29,10 +29,10 @@ const demoProjects: DemoProject[] = [
     slug: "moneyplan-budget-planner",
     description: "A personal finance and budget planning web application. Track expenses, manage budgets, and achieve your financial goals.",
     thumbnail: "/images/projects/budget-planner.png",
-    demoUrl: "", // Add your demo URL here
+    demoUrl: "/demo/budget-planner",
     projectUrl: "/projects/moneyplan-budget-planner",
     techStack: ["Web Development", "Budget Planning", "Personal Finance"],
-    status: "coming-soon"
+    status: "live"
   },
   {
     title: "RestaurantStarter",
@@ -102,12 +102,21 @@ export default function DemoPage() {
                   {/* Actions */}
                   <div className="flex gap-2 pt-2">
                     {demo.status === "live" && demo.demoUrl ? (
-                      <Button asChild className="flex-1">
-                        <a href={demo.demoUrl} target="_blank" rel="noopener noreferrer">
-                          <Play className="mr-2 h-4 w-4" />
-                          Try Demo
-                        </a>
-                      </Button>
+                      demo.demoUrl.startsWith("http") ? (
+                        <Button asChild className="flex-1">
+                          <a href={demo.demoUrl} target="_blank" rel="noopener noreferrer">
+                            <Play className="mr-2 h-4 w-4" />
+                            Try Demo
+                          </a>
+                        </Button>
+                      ) : (
+                        <Button asChild className="flex-1">
+                          <Link href={demo.demoUrl}>
+                            <Play className="mr-2 h-4 w-4" />
+                            Try Demo
+                          </Link>
+                        </Button>
+                      )
                     ) : (
                       <Button disabled className="flex-1">
                         <Play className="mr-2 h-4 w-4" />

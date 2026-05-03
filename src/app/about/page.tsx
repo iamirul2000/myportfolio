@@ -46,6 +46,10 @@ export default function AboutPage() {
               <ScrollAnimation animation="fade-up" delay={100}>
                 <QuickFacts />
               </ScrollAnimation>
+
+              <ScrollAnimation animation="fade-up" delay={200}>
+                <WorkPhilosophy />
+              </ScrollAnimation>
             </div>
 
             {/* Main Content */}
@@ -63,15 +67,9 @@ export default function AboutPage() {
                 </Card>
               </ScrollAnimation>
 
-              <div className="grid gap-6 lg:grid-cols-2">
-                <ScrollAnimation animation="slide-right" delay={100}>
-                  <SkillsCategorized />
-                </ScrollAnimation>
-                
-                <ScrollAnimation animation="slide-left" delay={100}>
-                  <WorkPhilosophy />
-                </ScrollAnimation>
-              </div>
+              <ScrollAnimation animation="slide-right" delay={100}>
+                <SkillsCategorized />
+              </ScrollAnimation>
 
               <ScrollAnimation animation="fade-up" delay={200}>
                 <CurrentFocus />

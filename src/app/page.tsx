@@ -7,7 +7,7 @@ import { SkillsSectionEnhanced } from "@/components/skills-section-enhanced";
 import { TestimonialsEnhanced } from "@/components/testimonials-enhanced";
 import { TechStackVisualizer } from "@/components/tech-stack-visualizer";
 import { Timeline } from "@/components/timeline";
-import { TrustedBy } from "@/components/trusted-by";
+import { WorkHighlightsHero } from "@/components/work-highlights-hero";
 import { PersonStructuredData, WebsiteStructuredData } from "@/components/structured-data";
 import { portfolioConfig, getActivePersona } from "@/data/portfolio-config";
 import { buildMetadata } from "@/lib/metadata";
@@ -26,7 +26,7 @@ export default function HomePage() {
       <PersonStructuredData />
       <WebsiteStructuredData />
       <HeroSection />
-      <TrustedBy />
+      <WorkHighlightsHero />
       <ProjectsGrid featuredOnly />
       <TechStackVisualizer />
       <SkillsSectionEnhanced />

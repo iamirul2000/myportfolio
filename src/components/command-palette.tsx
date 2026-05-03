@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
-import { Search, FileText, User, Briefcase, Mail, Home, X } from "lucide-react";
+import { Search, FileText, User, Briefcase, Mail, Home, X, Play } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 interface Command {
@@ -32,6 +32,13 @@ export function CommandPalette() {
       icon: <Briefcase className="h-4 w-4" />,
       action: () => router.push("/projects"),
       keywords: ["projects", "work", "portfolio"],
+    },
+    {
+      id: "demo",
+      label: "Try Demos",
+      icon: <Play className="h-4 w-4" />,
+      action: () => router.push("/demo"),
+      keywords: ["demo", "live", "interactive", "try"],
     },
     {
       id: "about",

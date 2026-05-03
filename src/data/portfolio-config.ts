@@ -426,6 +426,7 @@ const personalProjects: Project[] = [
     thumbnail: "/images/projects/budget-planner.png",
     gallery: ["/images/projects/budget-planner.png"],
     links: [
+      { label: "Try Demo", href: "/demo/budget-planner" },
       { label: "Buy on Gumroad", href: "https://amiruliman83.gumroad.com/l/moneyplan-budget-planner" }
     ],
     results: [
@@ -537,6 +538,7 @@ export const portfolioConfig = {
     { label: "Home", href: "/" },
     { label: "About", href: "/about" },
     { label: "Projects", href: "/projects" },
+    { label: "Demo", href: "/demo" },
     { label: "Focus Areas", href: "/services" },
     { label: "Resume", href: "/resume" },
     { label: "Contact", href: "/contact" }

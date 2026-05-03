@@ -25,8 +25,8 @@ export default function ContactPage() {
         description="If you&apos;re hiring for a full stack or backend-leaning software engineering role, I&apos;d be glad to connect. Email is the best way to reach me for opportunities, product discussions, or a closer look at my experience."
       />
       <section className="pb-16">
-        <div className="container grid gap-6 lg:grid-cols-[1.1fr_0.9fr]">
-          <Card className="space-y-6">
+        <div className="container grid gap-6 lg:grid-cols-2">
+          <Card className="flex flex-col space-y-6">
             <div className="space-y-3">
               <h2 className="text-2xl font-semibold">Best ways to reach me</h2>
               <p className="text-sm leading-7 text-muted-foreground">
@@ -49,19 +49,32 @@ export default function ContactPage() {
                 </Link>
               </Button>
             </div>
-            <div className="rounded-3xl border border-border/70 bg-background/60 p-5 text-sm text-muted-foreground">
+            <div className="mt-auto rounded-3xl border border-border/70 bg-background/60 p-5 text-sm text-muted-foreground">
               Email is the fastest option. If you are reaching out about a role, a team, or a product opportunity, a short intro and relevant details are enough.
             </div>
           </Card>
           <div className="space-y-6">
             <Card className="space-y-4">
               <h2 className="text-2xl font-semibold">Contact details</h2>
-              <p className="text-sm text-muted-foreground">Email is the best way to reach me. I&apos;m happy to connect about software engineering roles, product teams, and backend or full stack opportunities.</p>
-              <div className="space-y-3 text-sm text-muted-foreground">
-                <p>Email: {persona.email}</p>
-                <p>Phone: {persona.phone}</p>
-                <p>Location: {persona.location}</p>
-                <p>Website: {persona.website}</p>
+              <div className="space-y-3 text-sm">
+                <div className="flex items-start gap-2">
+                  <span className="font-medium text-foreground">Email:</span>
+                  <span className="text-muted-foreground">{persona.email}</span>
+                </div>
+                <div className="flex items-start gap-2">
+                  <span className="font-medium text-foreground">Phone:</span>
+                  <span className="text-muted-foreground">{persona.phone}</span>
+                </div>
+                <div className="flex items-start gap-2">
+                  <span className="font-medium text-foreground">Location:</span>
+                  <span className="text-muted-foreground">{persona.location}</span>
+                </div>
+                <div className="flex items-start gap-2">
+                  <span className="font-medium text-foreground">Website:</span>
+                  <a href={persona.website} target="_blank" rel="noreferrer" className="text-primary hover:underline">
+                    {persona.website}
+                  </a>
+                </div>
               </div>
             </Card>
             <NewsletterSignup />

@@ -76,10 +76,10 @@ export function SkillsRadarChart({ skills = defaultSkills }: SkillsRadarChartPro
         </p>
       </div>
 
-      <div className="flex flex-col items-center gap-8 lg:flex-row lg:items-start lg:justify-between">
+      <div className="flex flex-col items-center gap-8 lg:flex-row lg:items-center lg:justify-center">
         {/* Radar Chart */}
-        <div className="relative">
-          <svg width="400" height="400" viewBox="0 0 400 400" className="max-w-full">
+        <div className="relative flex-shrink-0">
+          <svg width="500" height="500" viewBox="0 0 400 400" className="max-w-full">
             {/* Grid circles */}
             {gridCircles.map((radius, i) => (
               <circle
@@ -174,7 +174,7 @@ export function SkillsRadarChart({ skills = defaultSkills }: SkillsRadarChartPro
         </div>
 
         {/* Legend */}
-        <div className="w-full space-y-3 lg:w-64">
+        <div className="w-full space-y-3 lg:w-80">
           <h4 className="text-sm font-semibold uppercase tracking-wider text-muted-foreground">
             Skills Breakdown
           </h4>

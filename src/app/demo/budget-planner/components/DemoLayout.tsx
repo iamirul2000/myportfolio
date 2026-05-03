@@ -57,7 +57,7 @@ export default function DemoLayout({ activeTab, onTabChange, children }: DemoLay
         </aside>
 
         {/* Main Content */}
-        <main className="flex-1 p-6 lg:p-8 min-h-[600px] max-h-[800px] overflow-y-auto">
+        <main className="flex-1 p-6 lg:p-8 min-h-[800px] max-h-[1200px] overflow-y-auto">
           {children}
         </main>
       </div>

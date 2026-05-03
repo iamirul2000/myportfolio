@@ -2,6 +2,7 @@ import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { MapPin, Mail, Github, Linkedin, Download } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 
 interface AboutProfileCardProps {
   name: string;
@@ -35,8 +36,14 @@ export function AboutProfileCard({
       <div className="relative px-6 pb-6">
         {/* Avatar */}
         <div className="relative -mt-16 mb-4">
-          <div className="inline-flex h-32 w-32 items-center justify-center rounded-full border-4 border-background bg-gradient-to-br from-primary to-accent text-4xl font-bold text-primary-foreground shadow-xl">
-            {name.split(" ").map((n) => n[0]).join("")}
+          <div className="relative inline-flex h-32 w-32 overflow-hidden rounded-full border-4 border-background shadow-xl">
+            <Image
+              src="/images/projects/about-image.jpeg"
+              alt={name}
+              fill
+              className="object-cover"
+              priority
+            />
           </div>
         </div>
 

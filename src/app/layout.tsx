@@ -10,6 +10,8 @@ import { BackToTop } from "@/components/back-to-top";
 import { CommandPalette } from "@/components/command-palette";
 import { MobileBottomNav } from "@/components/mobile-bottom-nav";
 import { ScrollProgress } from "@/components/scroll-progress";
+import { SkipToContent } from "@/components/skip-to-content";
+import { BreadcrumbNavigation } from "@/components/breadcrumb-navigation";
 import { portfolioConfig } from "@/data/portfolio-config";
 
 import "./globals.css";
@@ -39,10 +41,12 @@ export default function RootLayout({ children }: Readonly<{ children: ReactNode 
     <html lang="en" suppressHydrationWarning>
       <body className={`${fontSans.variable} min-h-screen font-sans`}>
         <ThemeProvider attribute="class" defaultTheme={portfolioConfig.theme.defaultMode} enableSystem>
+          <SkipToContent />
           <div className="relative flex min-h-screen flex-col pb-16 md:pb-0">
             <ScrollProgress />
             <SiteHeader />
-            <main className="flex-1">{children}</main>
+            <BreadcrumbNavigation />
+            <main id="main-content" className="flex-1">{children}</main>
             <SiteFooter />
             <FloatingCTA />
             <BackToTop />

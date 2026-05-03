@@ -6,12 +6,14 @@ interface AnimatedCounterProps {
   end: number;
   duration?: number;
   suffix?: string;
+  className?: string;
 }
 
 export function AnimatedCounter({
   end,
   duration = 2000,
   suffix = "",
+  className,
 }: AnimatedCounterProps) {
   const [count, setCount] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
@@ -57,7 +59,7 @@ export function AnimatedCounter({
   }, [isVisible, end, duration]);
 
   return (
-    <span ref={ref}>
+    <span ref={ref} className={className}>
       {count}
       {suffix}
     </span>

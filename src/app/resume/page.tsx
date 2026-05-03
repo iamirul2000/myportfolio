@@ -2,8 +2,10 @@ import Link from "next/link";
 
 import { PageHero } from "@/components/page-hero";
 import { Button } from "@/components/ui/button";
-import { Card } from "@/components/ui/card";
 import { PrintButton } from "@/components/print-button";
+import { ExperienceTimelineInteractive } from "@/components/experience-timeline-interactive";
+import { SkillsRadarChart } from "@/components/skills-radar-chart";
+import { PerformanceMetrics } from "@/components/performance-metrics";
 import { getActivePersona } from "@/data/portfolio-config";
 import { buildMetadata } from "@/lib/metadata";
 
@@ -34,7 +36,7 @@ export default function ResumePage() {
         }
       />
       <section className="pb-16">
-        <div className="container space-y-6">
+        <div className="container space-y-12">
           {/* Contact Info - Print Only */}
           <div className="hidden print:block mb-8">
             <h1 className="text-3xl font-bold mb-2">{persona.label}</h1>
@@ -46,16 +48,21 @@ export default function ResumePage() {
             </div>
           </div>
 
-          {persona.timeline.map((entry) => (
-            <Card key={`${entry.period}-${entry.title}`} className="grid gap-4 md:grid-cols-[180px_1fr] md:items-start">
-              <p className="text-sm uppercase tracking-[0.18em] text-muted-foreground">{entry.period}</p>
-              <div>
-                <h2 className="text-2xl font-semibold">{entry.title}</h2>
-                <p className="mt-1 text-sm text-primary">{entry.organization}</p>
-                <p className="mt-4 text-sm leading-7 text-muted-foreground">{entry.summary}</p>
-              </div>
-            </Card>
-          ))}
+          {/* Skills Radar Chart */}
+          <div className="no-print">
+            <SkillsRadarChart />
+          </div>
+
+          {/* Experience Timeline */}
+          <div>
+            <h2 className="mb-6 text-3xl font-semibold">Work Experience</h2>
+            <ExperienceTimelineInteractive timeline={persona.timeline} />
+          </div>
+
+          {/* Performance Metrics */}
+          <div className="no-print">
+            <PerformanceMetrics />
+          </div>
         </div>
       </section>
     </>

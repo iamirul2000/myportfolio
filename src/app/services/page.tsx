@@ -1,5 +1,8 @@
 import { PageHero } from "@/components/page-hero";
-import { Card } from "@/components/ui/card";
+import { ServicesEnhanced } from "@/components/services-enhanced";
+import { ServicesStats } from "@/components/services-stats";
+import { ServicesCTA } from "@/components/services-cta";
+import { ScrollAnimation } from "@/components/scroll-animations";
 import { getActivePersona } from "@/data/portfolio-config";
 import { buildMetadata } from "@/lib/metadata";
 
@@ -14,22 +17,36 @@ export default function ServicesPage() {
 
   return (
     <>
-      <PageHero eyebrow="Contribution Areas" title="How I contribute" description="The engineering areas where I add the most value across product maintenance, backend work, feature delivery, and release support." />
+      <PageHero 
+        eyebrow="Contribution Areas" 
+        title="How I contribute" 
+        description="The engineering areas where I add the most value across product maintenance, backend work, feature delivery, and release support." 
+      />
+      
+      {/* Stats Section */}
+      <section className="pb-8">
+        <div className="container">
+          <ScrollAnimation animation="fade-up">
+            <ServicesStats />
+          </ScrollAnimation>
+        </div>
+      </section>
+
+      {/* Services Grid */}
       <section className="pb-16">
-        <div className="container grid gap-6 lg:grid-cols-3">
-          {persona.services.map((service) => (
-            <Card key={service.title} className="space-y-5">
-              <div>
-                <h2 className="text-2xl font-semibold">{service.title}</h2>
-                <p className="mt-3 text-sm leading-6 text-muted-foreground">{service.description}</p>
-              </div>
-              <div className="space-y-2 text-sm text-muted-foreground">
-                {service.deliverables.map((item) => (
-                  <p key={item}>{item}</p>
-                ))}
-              </div>
-            </Card>
-          ))}
+        <div className="container">
+          <ScrollAnimation animation="fade-up" delay={100}>
+            <ServicesEnhanced services={persona.services} />
+          </ScrollAnimation>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="pb-16">
+        <div className="container">
+          <ScrollAnimation animation="fade-up" delay={200}>
+            <ServicesCTA />
+          </ScrollAnimation>
         </div>
       </section>
     </>

@@ -3,6 +3,8 @@ import Link from "next/link";
 import { PageHero } from "@/components/page-hero";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
+import { CopyEmailButton } from "@/components/copy-email-button";
+import { NewsletterSignup } from "@/components/newsletter-signup";
 import { getActivePersona } from "@/data/portfolio-config";
 import { buildMetadata } from "@/lib/metadata";
 
@@ -35,6 +37,7 @@ export default function ContactPage() {
               <Button asChild size="lg">
                 <Link href={`mailto:${persona.email}`}>Email me</Link>
               </Button>
+              <CopyEmailButton email={persona.email} size="lg" variant="secondary" />
               <Button asChild variant="secondary" size="lg">
                 <Link href="https://www.linkedin.com/in/mirul-/" target="_blank" rel="noreferrer">
                   LinkedIn
@@ -50,16 +53,19 @@ export default function ContactPage() {
               Email is the fastest option. If you are reaching out about a role, a team, or a product opportunity, a short intro and relevant details are enough.
             </div>
           </Card>
-          <Card className="space-y-4">
-            <h2 className="text-2xl font-semibold">Contact details</h2>
-            <p className="text-sm text-muted-foreground">Email is the best way to reach me. I&apos;m happy to connect about software engineering roles, product teams, and backend or full stack opportunities.</p>
-            <div className="space-y-3 text-sm text-muted-foreground">
-              <p>Email: {persona.email}</p>
-              <p>Phone: {persona.phone}</p>
-              <p>Location: {persona.location}</p>
-              <p>Website: {persona.website}</p>
-            </div>
-          </Card>
+          <div className="space-y-6">
+            <Card className="space-y-4">
+              <h2 className="text-2xl font-semibold">Contact details</h2>
+              <p className="text-sm text-muted-foreground">Email is the best way to reach me. I&apos;m happy to connect about software engineering roles, product teams, and backend or full stack opportunities.</p>
+              <div className="space-y-3 text-sm text-muted-foreground">
+                <p>Email: {persona.email}</p>
+                <p>Phone: {persona.phone}</p>
+                <p>Location: {persona.location}</p>
+                <p>Website: {persona.website}</p>
+              </div>
+            </Card>
+            <NewsletterSignup />
+          </div>
         </div>
       </section>
     </>

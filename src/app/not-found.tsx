@@ -1,16 +1,71 @@
 import Link from "next/link";
-
+import { Home, ArrowLeft, Search, Briefcase } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 export default function NotFound() {
   return (
-    <div className="container flex min-h-[60vh] flex-col items-start justify-center gap-6 py-20">
-      <p className="text-sm uppercase tracking-[0.2em] text-primary">404</p>
-      <h1 className="max-w-xl text-4xl font-semibold tracking-tight sm:text-5xl">That page is missing from the demo content.</h1>
-      <p className="max-w-xl text-muted-foreground">Create or update entries in `src/data/portfolio-config.ts` to add more projects, articles, and case studies.</p>
-      <Button asChild>
-        <Link href="/">Back home</Link>
-      </Button>
+    <div className="container flex min-h-[70vh] flex-col items-center justify-center py-20">
+      <div className="text-center">
+        {/* 404 Visual */}
+        <div className="mb-8">
+          <h1 className="text-9xl font-bold text-primary/20">404</h1>
+        </div>
+
+        {/* Message */}
+        <h2 className="heading-secondary mb-4">Page Not Found</h2>
+        <p className="body-large mb-8 max-w-md">
+          The page you&apos;re looking for doesn&apos;t exist or has been moved.
+        </p>
+
+        {/* Actions */}
+        <div className="flex flex-wrap items-center justify-center gap-4">
+          <Button asChild size="lg">
+            <Link href="/">
+              <Home className="mr-2 h-4 w-4" />
+              Go Home
+            </Link>
+          </Button>
+          <Button asChild variant="outline" size="lg">
+            <Link href="/projects">
+              <Briefcase className="mr-2 h-4 w-4" />
+              View Projects
+            </Link>
+          </Button>
+        </div>
+
+        {/* Helpful Links */}
+        <div className="mt-12 border-t border-border pt-8">
+          <p className="mb-4 text-sm text-muted-foreground">
+            Looking for something specific?
+          </p>
+          <div className="flex flex-wrap justify-center gap-4 text-sm">
+            <Link
+              href="/about"
+              className="text-muted-foreground transition-colors hover:text-primary"
+            >
+              About
+            </Link>
+            <Link
+              href="/projects"
+              className="text-muted-foreground transition-colors hover:text-primary"
+            >
+              Projects
+            </Link>
+            <Link
+              href="/resume"
+              className="text-muted-foreground transition-colors hover:text-primary"
+            >
+              Resume
+            </Link>
+            <Link
+              href="/contact"
+              className="text-muted-foreground transition-colors hover:text-primary"
+            >
+              Contact
+            </Link>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }

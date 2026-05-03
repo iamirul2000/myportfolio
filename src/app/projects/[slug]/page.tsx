@@ -7,6 +7,7 @@ import { PageHero } from "@/components/page-hero";
 import { Card } from "@/components/ui/card";
 import { RelatedProjects } from "@/components/related-projects";
 import { ProjectStructuredData } from "@/components/structured-data";
+import { SocialShare } from "@/components/social-share";
 import { getProjectBySlug } from "@/data/portfolio-config";
 import { buildMetadata } from "@/lib/metadata";
 
@@ -40,6 +41,13 @@ export default async function ProjectDetailPage({ params }: { params: Promise<{ 
     <>
       <ProjectStructuredData project={project} />
       <PageHero eyebrow={categories.join(" / ")} title={project.title} description={project.description} />
+      <div className="container mb-8">
+        <SocialShare
+          title={project.title}
+          description={project.description}
+          className="flex justify-end"
+        />
+      </div>
       <section className="pb-16">
         <div className="container grid gap-8 lg:grid-cols-[1.2fr_0.8fr] lg:items-start">
           <div className="space-y-6">

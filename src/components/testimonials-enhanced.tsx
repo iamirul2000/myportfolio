@@ -4,6 +4,7 @@ import { Card } from "@/components/ui/card";
 import { useState } from "react";
 import { ChevronLeft, ChevronRight, Quote } from "lucide-react";
 import { cn } from "@/lib/utils";
+import Image from "next/image";
 
 interface Testimonial {
   name: string;
@@ -52,11 +53,12 @@ export function TestimonialsEnhanced({ testimonials }: TestimonialsEnhancedProps
             <div className="relative space-y-6">
               <div className="flex items-center gap-4">
                 {currentTestimonial.image && (
-                  <div className="h-16 w-16 overflow-hidden rounded-full bg-gradient-to-br from-primary to-accent">
-                    <img
+                  <div className="relative h-16 w-16 overflow-hidden rounded-full bg-gradient-to-br from-primary to-accent">
+                    <Image
                       src={currentTestimonial.image}
                       alt={currentTestimonial.name}
-                      className="h-full w-full object-cover"
+                      fill
+                      className="object-cover"
                     />
                   </div>
                 )}

@@ -30,7 +30,7 @@ export default function AboutPage() {
       
       <section className="pb-16">
         <div className="container">
-          <div className="grid gap-6 lg:grid-cols-[320px_1fr]">
+          <div className="grid gap-6 lg:grid-cols-[280px_1fr]">
             {/* Left Sidebar */}
             <div className="space-y-6">
               <ScrollAnimation animation="fade-up">
@@ -51,13 +51,15 @@ export default function AboutPage() {
             {/* Main Content */}
             <div className="space-y-6">
               <ScrollAnimation animation="fade-up">
-                <Card className="space-y-5">
+                <Card className="card-spacing">
                   <h2 className="text-2xl font-semibold">Engineering Summary</h2>
-                  {persona.longBio.map((paragraph, index) => (
-                    <p key={index} className="text-sm leading-7 text-muted-foreground sm:text-base">
-                      {paragraph}
-                    </p>
-                  ))}
+                  <div className="mt-5 space-y-4">
+                    {persona.longBio.map((paragraph, index) => (
+                      <p key={index} className="text-sm leading-7 text-muted-foreground sm:text-base">
+                        {paragraph}
+                      </p>
+                    ))}
+                  </div>
                 </Card>
               </ScrollAnimation>
 

@@ -51,11 +51,11 @@ export function QuickFacts() {
   return (
     <Card className="card-spacing">
       <h3 className="mb-6 text-xl font-semibold">Quick Facts</h3>
-      <div className="grid gap-4 sm:grid-cols-2">
+      <div className="space-y-3">
         {facts.map((fact) => (
           <div
             key={fact.label}
-            className="flex items-start gap-3 rounded-lg border border-border/50 bg-muted/30 p-4 transition-colors hover:border-primary/50"
+            className="flex items-start gap-3 rounded-lg border border-border/50 bg-muted/30 p-3 transition-colors hover:border-primary/50"
           >
             <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary">
               {fact.icon}
@@ -64,7 +64,7 @@ export function QuickFacts() {
               <p className="text-xs font-medium text-muted-foreground">
                 {fact.label}
               </p>
-              <p className="mt-1 text-sm font-semibold">{fact.value}</p>
+              <p className="mt-1 text-sm font-semibold leading-tight">{fact.value}</p>
             </div>
           </div>
         ))}

@@ -8,6 +8,7 @@ import { Card } from "@/components/ui/card";
 import { RelatedProjects } from "@/components/related-projects";
 import { ProjectStructuredData } from "@/components/structured-data";
 import { SocialShare } from "@/components/social-share";
+import { ProjectGalleryEnhanced } from "@/components/project-gallery-enhanced";
 import { getProjectBySlug } from "@/data/portfolio-config";
 import { buildMetadata } from "@/lib/metadata";
 
@@ -51,11 +52,23 @@ export default async function ProjectDetailPage({ params }: { params: Promise<{ 
       <section className="pb-16">
         <div className="container grid gap-8 lg:grid-cols-[1.2fr_0.8fr] lg:items-start">
           <div className="space-y-6">
-            {project.gallery.map((image) => (
-              <div key={image} className="overflow-hidden rounded-[1.75rem] border border-border/70 bg-background/70">
-                <Image src={image} alt={project.title} width={1400} height={900} className="h-auto w-full object-cover" />
-              </div>
-            ))}
+            {/* Enhanced Gallery for MoneyPlan Budget Planner */}
+            {project.slug === "moneyplan-budget-planner" ? (
+              <ProjectGalleryEnhanced
+                images={project.gallery.map((src) => ({
+                  src,
+                  alt: `${project.title} - Budget Planning Interface`,
+                  caption: "MoneyPlan Budget Planner - Track expenses and manage your finances"
+                }))}
+                title={project.title}
+              />
+            ) : (
+              project.gallery.map((image) => (
+                <div key={image} className="overflow-hidden rounded-[1.75rem] border border-border/70 bg-background/70">
+                  <Image src={image} alt={project.title} width={1400} height={900} className="h-auto w-full object-cover" />
+                </div>
+              ))
+            )}
             <Card className="space-y-6">
               <div>
                 <h2 className="text-2xl font-semibold">Overview</h2>

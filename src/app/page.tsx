@@ -2,8 +2,8 @@ import { CtaBanner } from "@/components/cta-banner";
 import { FaqSection } from "@/components/faq-section";
 import { HeroSection } from "@/components/hero-section";
 import { ProjectsGrid } from "@/components/projects-grid";
-import { ServicesPreview } from "@/components/services-preview";
-import { SkillsSection } from "@/components/skills-section";
+import { ServicesPreviewEnhanced } from "@/components/services-preview-enhanced";
+import { SkillsSectionEnhanced } from "@/components/skills-section-enhanced";
 import { TestimonialsEnhanced } from "@/components/testimonials-enhanced";
 import { TechStackVisualizer } from "@/components/tech-stack-visualizer";
 import { Timeline } from "@/components/timeline";
@@ -29,8 +29,8 @@ export default function HomePage() {
       <TrustedBy />
       <ProjectsGrid featuredOnly />
       <TechStackVisualizer />
-      <SkillsSection />
-      <ServicesPreview />
+      <SkillsSectionEnhanced />
+      <ServicesPreviewEnhanced />
       {persona.testimonials && persona.testimonials.length > 0 && (
         <TestimonialsEnhanced testimonials={persona.testimonials} />
       )}

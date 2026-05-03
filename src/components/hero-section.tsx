@@ -4,6 +4,7 @@ import { ArrowRight, Github, Linkedin, Mail, MapPin, Sparkles } from "lucide-rea
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
+import { TypewriterRole } from "@/components/typewriter-role";
 import { getActivePersona, portfolioConfig } from "@/data/portfolio-config";
 
 const socialIcons = {
@@ -27,7 +28,9 @@ export function HeroSection() {
           <div className="space-y-5">
             <h1 className="max-w-4xl text-5xl font-semibold tracking-tight leading-[1.14] text-balance sm:text-6xl lg:text-7xl">
               {persona.label}
-              <span className="mt-3 block pb-2 leading-[1.14] bg-gradient-to-r from-primary via-sky-500 to-accent bg-clip-text text-transparent">{persona.role}</span>
+              <span className="mt-3 block pb-2 leading-[1.14] bg-gradient-to-r from-primary via-sky-500 to-accent bg-clip-text text-transparent">
+                <TypewriterRole />
+              </span>
             </h1>
             <p className="max-w-2xl text-lg text-muted-foreground sm:text-xl">{persona.tagline}</p>
           </div>

@@ -1,5 +1,5 @@
 import { PageHero } from "@/components/page-hero";
-import { ProjectTypeFilter } from "@/components/project-type-filter";
+import { ProjectFilterEnhanced } from "@/components/project-filter-enhanced";
 import { ProjectStats } from "@/components/project-stats";
 import { getCompanyProjects, getPersonalProjects } from "@/data/portfolio-config";
 import { buildMetadata } from "@/lib/metadata";
@@ -24,7 +24,7 @@ export default function ProjectsPage() {
       <ProjectStats />
       <section className="pb-16">
         <div className="container">
-          <ProjectTypeFilter
+          <ProjectFilterEnhanced
             companyProjects={companyProjects}
             personalProjects={personalProjects}
           />

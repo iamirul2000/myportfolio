@@ -2,18 +2,18 @@
 
 import { useEffect, useRef, useState } from "react";
 
-interface AnimatedCounterProps {
-  end: number;
+type AnimatedCounterProps = {
+  value: number;
   duration?: number;
   suffix?: string;
   className?: string;
-}
+};
 
-export function AnimatedCounter({
-  end,
-  duration = 2000,
+export function AnimatedCounter({ 
+  value, 
+  duration = 2000, 
   suffix = "",
-  className,
+  className = "" 
 }: AnimatedCounterProps) {
   const [count, setCount] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
@@ -33,35 +33,49 @@ export function AnimatedCounter({
       observer.observe(ref.current);
     }
 
-    return () => observer.disconnect();
+    return () => {
+      if (ref.current) {
+        observer.unobserve(ref.current);
+      }
+    };
   }, [isVisible]);
 
   useEffect(() => {
     if (!isVisible) return;
 
-    let startTime: number;
+    let startTime: number | null = null;
     let animationFrame: number;
 
-    const animate = (currentTime: number) => {
-      if (!startTime) startTime = currentTime;
-      const progress = Math.min((currentTime - startTime) / duration, 1);
+    const animate = (timestamp: number) => {
+      if (!startTime) startTime = timestamp;
+      const progress = timestamp - startTime;
+      const percentage = Math.min(progress / duration, 1);
 
-      setCount(Math.floor(progress * end));
+      // Easing function for smooth animation
+      const easeOutQuart = 1 - Math.pow(1 - percentage, 4);
+      const currentCount = Math.floor(easeOutQuart * value);
 
-      if (progress < 1) {
+      setCount(currentCount);
+
+      if (percentage < 1) {
         animationFrame = requestAnimationFrame(animate);
+      } else {
+        setCount(value);
       }
     };
 
     animationFrame = requestAnimationFrame(animate);
 
-    return () => cancelAnimationFrame(animationFrame);
-  }, [isVisible, end, duration]);
+    return () => {
+      if (animationFrame) {
+        cancelAnimationFrame(animationFrame);
+      }
+    };
+  }, [isVisible, value, duration]);
 
   return (
     <span ref={ref} className={className}>
-      {count}
-      {suffix}
+      {count}{suffix}
     </span>
   );
 }

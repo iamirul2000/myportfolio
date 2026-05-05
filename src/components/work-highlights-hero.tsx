@@ -18,21 +18,21 @@ const workHighlights = [
   {
     icon: Briefcase,
     title: "Production Systems",
-    value: "6+",
+    value: "1",
     description: "Live products maintained",
     color: "from-blue-500/20 to-cyan-500/20"
   },
   {
     icon: Code2,
     title: "Bug Fixes",
-    value: "150+",
+    value: "40+",
     description: "Issues resolved",
     color: "from-red-500/20 to-orange-500/20"
   },
   {
     icon: Zap,
     title: "Features",
-    value: "40+",
+    value: "10+",
     description: "Enhancements delivered",
     color: "from-purple-500/20 to-pink-500/20"
   },

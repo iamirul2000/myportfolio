@@ -9,7 +9,7 @@ export function PageHero({ eyebrow, title, description, aside }: { eyebrow: stri
         <div className="space-y-5">
           <Badge>{eyebrow}</Badge>
           <h1 className="max-w-4xl text-4xl font-semibold tracking-tight text-balance sm:text-5xl lg:text-6xl">{title}</h1>
-          <p className="max-w-2xl text-lg text-muted-foreground">{description}</p>
+          <p className="max-w-2xl text-lg text-muted-foreground text-justify">{description}</p>
         </div>
         {aside ? <div>{aside}</div> : null}
       </div>

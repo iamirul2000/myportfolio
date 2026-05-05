@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import { Card } from "@/components/ui/card";
+import { AnimatedCounter } from "@/components/animated-counter";
 
 interface Skill {
   name: string;
@@ -67,7 +68,7 @@ export function SkillBars() {
                       <div className="mb-2 flex justify-between text-sm">
                         <span className="font-medium">{skill.name}</span>
                         <span className="text-muted-foreground">
-                          {skill.level}%
+                          <AnimatedCounter value={skill.level} suffix="%" duration={1500} />
                         </span>
                       </div>
                       <div className="h-2 overflow-hidden rounded-full bg-muted">

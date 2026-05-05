@@ -501,6 +501,37 @@ const personalProjects: Project[] = [
       "Added another practical product build to the portfolio beyond maintenance-heavy work"
     ],
     featured: true
+  },
+  {
+    title: "Clinic Booking",
+    slug: "clinic-booking",
+    category: ["Web App", "Dashboard"],
+    description: "A professional clinic booking and management system with patient appointments, doctor scheduling, service management, and admin dashboard for healthcare facilities.",
+    techStack: ["Next.js", "Laravel", "MySQL", "TypeScript", "Tailwind CSS", "Docker"],
+    tags: ["Healthcare", "Clinic Management", "Booking System", "Admin Dashboard"],
+    thumbnail: "/images/projects/clinic-booking-dashboard.png",
+    gallery: ["/images/projects/clinic-booking-dashboard.png"],
+    links: [
+      { label: "Try Demo", href: "/demo/clinic-booking" },
+      { label: "Contact", href: "/contact" }
+    ],
+    results: [
+      "Built a complete clinic management system from concept to deployment",
+      "Designed healthcare-focused UI with medical aesthetic",
+      "Implemented full-stack solution with Next.js frontend and Laravel backend"
+    ],
+    overview:
+      "Clinic Booking is a comprehensive clinic booking web application built for neighborhood family clinics. The system includes public-facing pages for patients to book appointments and a complete admin dashboard for clinic staff to manage operations.",
+    challenge:
+      "Healthcare booking systems need to balance patient-friendly interfaces with powerful admin tools while maintaining trust, professionalism, and HIPAA-aware design principles.",
+    solution:
+      "I developed a full-stack application with Next.js 15 frontend and Laravel 11 backend, featuring patient appointment booking, doctor schedule management, service catalog, and a professional admin dashboard with real-time updates.",
+    impact: [
+      "Created a production-ready healthcare management system",
+      "Demonstrated full-stack development capabilities",
+      "Built a trustworthy, professional healthcare UI/UX"
+    ],
+    featured: true
   }
 ];
 
@@ -539,8 +570,6 @@ export const portfolioConfig = {
     { label: "About", href: "/about" },
     { label: "Projects", href: "/projects" },
     { label: "Demo", href: "/demo" },
-    { label: "Focus Areas", href: "/services" },
-    { label: "Resume", href: "/resume" },
     { label: "Contact", href: "/contact" }
   ],
   homepage: {
@@ -647,12 +676,12 @@ export const portfolioConfig = {
     },
     developer: {
       label: "Amirul Iman",
-      role: "Full Stack Web Software Engineer",
+      role: "Full Stack Software Engineer",
       tagline:
         "Currently working on Financio at ABSS, I support a live business product through bug fixing, feature enhancements, data patching, and day-to-day engineering work across existing systems.",
       availability: "Currently working at Asian Business Software Solutions (ABSS)",
       shortBio:
-        "Full Stack Web Software Engineer with experience building, maintaining, and improving production web and mobile applications. Strongest in backend-heavy product work across Laravel, PHP, MySQL, REST APIs, Angular, Flutter, and live system support.",
+        "Backend-Leaning Full Stack Software Engineer with experience building, maintaining, and improving production web and mobile applications. Strongest in backend-heavy product work across Laravel, PHP, MySQL, REST APIs, Angular, Flutter, and live system support.",
       longBio: [
         "I am a Full Stack Web Software Engineer with hands-on experience building, enhancing, and maintaining production software across web and mobile products. At Asian Business Software Solutions, I work on Financio, where I handle bug fixing, feature enhancements, and data patching in a live product environment.",
         "Before ABSS, I worked at Theta Edge Berhad across Laravel web systems, REST APIs, MySQL-backed applications, iOS app maintenance in Swift, Flutter feature development, and Android payment terminal integration. I also gained early backend and release-support experience during my internship at TrackerHero.",
@@ -674,9 +703,10 @@ export const portfolioConfig = {
         { label: "Email", href: "mailto:amirul.iman698@gmail.com" }
       ],
       stats: [
-        { value: "3+", label: "Years of experience" },
-        { value: "4", label: "Major product environments" },
-        { value: "Oct 2025", label: "Started at ABSS" }
+        { value: "3+", label: "Years Experience" },
+        { value: "6+", label: "Production Systems" },
+        { value: "40+", label: "Issues Resolved" },
+        { value: "10+", label: "Features Delivered" }
       ],
       trustedBy: ["Asian Business Software Solutions", "Financio", "Theta Edge Berhad", "PigrimPro", "SakuPay", "POSLite", "TrackerHero"],
       skills: ["Laravel", "PHP", "MySQL", "REST APIs", "Angular", "TypeScript", "JavaScript", "Flutter", "Swift", "Bug Fixing", "Testing", "Production Support"],
@@ -716,12 +746,12 @@ export const portfolioConfig = {
       testimonials: [
         {
           name: "Senior Developer",
-          role: "Tech Lead",
+          role: "Team Lead",
           company: "ABSS",
           quote: "Amirul consistently delivers reliable solutions and shows strong problem-solving skills when working on production systems. His attention to detail in bug fixing and feature enhancement has been valuable to the team."
         },
         {
-          name: "Project Manager",
+          name: "Manager",
           role: "Engineering Manager",
           company: "Theta Edge Berhad",
           quote: "Working with Amirul on PigrimPro was a great experience. He demonstrated solid backend development skills and was always willing to collaborate with the team to solve complex technical challenges."

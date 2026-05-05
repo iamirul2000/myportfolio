@@ -2,6 +2,7 @@
 
 import { Card } from "@/components/ui/card";
 import { ErrorMessage } from "@/components/error-message";
+import { AnimatedCounter } from "@/components/animated-counter";
 import { useEffect, useState } from "react";
 
 interface GitHubStats {
@@ -91,15 +92,21 @@ export function GitHubStats() {
       </div>
       <div className="grid grid-cols-3 gap-4 pt-4">
         <div className="text-center">
-          <div className="text-2xl font-bold">{stats.repos}</div>
+          <div className="text-2xl font-bold">
+            <AnimatedCounter value={stats.repos} duration={1500} />
+          </div>
           <div className="text-xs text-muted-foreground">Repositories</div>
         </div>
         <div className="text-center">
-          <div className="text-2xl font-bold">{stats.followers}</div>
+          <div className="text-2xl font-bold">
+            <AnimatedCounter value={stats.followers} duration={1500} />
+          </div>
           <div className="text-xs text-muted-foreground">Followers</div>
         </div>
         <div className="text-center">
-          <div className="text-2xl font-bold">{stats.following}</div>
+          <div className="text-2xl font-bold">
+            <AnimatedCounter value={stats.following} duration={1500} />
+          </div>
           <div className="text-xs text-muted-foreground">Following</div>
         </div>
       </div>

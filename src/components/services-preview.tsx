@@ -32,7 +32,7 @@ export function ServicesPreview() {
           ))}
         </div>
         <Button asChild variant="secondary">
-          <Link href="/services">View focus areas</Link>
+          <Link href="/about#focus-areas">View focus areas</Link>
         </Button>
       </div>
     </section>

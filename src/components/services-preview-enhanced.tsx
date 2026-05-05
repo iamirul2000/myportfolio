@@ -39,9 +39,9 @@ const serviceColors = {
 };
 
 const contributionMetrics = [
-  { label: "Production Bugs Fixed", value: "150+", icon: Bug },
-  { label: "Features Delivered", value: "40+", icon: Sparkles },
-  { label: "Systems Maintained", value: "6", icon: Globe }
+  { label: "Production Bugs Fixed", value: "40+", icon: Bug },
+  { label: "Features Delivered", value: "10+", icon: Sparkles },
+  { label: "Systems Maintained", value: "1", icon: Globe }
 ];
 
 export function ServicesPreviewEnhanced() {
@@ -238,7 +238,7 @@ export function ServicesPreviewEnhanced() {
           </p>
           <div className="flex flex-wrap justify-center gap-3">
             <Button asChild variant="default" size="lg">
-              <Link href="/services">
+              <Link href="/about#focus-areas">
                 View All Focus Areas
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Link>

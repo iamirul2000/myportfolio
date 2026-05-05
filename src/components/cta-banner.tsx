@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Download } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 import { getActivePersona } from "@/data/portfolio-config";
@@ -20,12 +20,20 @@ export function CtaBanner() {
                 <h2 className="heading-secondary text-white">Hiring for a full stack or backend-leaning role?</h2>
                 <p className="body-large text-slate-200/90">I&apos;m happy to connect about software engineering opportunities, product work, or a closer look at my experience.</p>
               </div>
-              <Button asChild size="lg" className="bg-white text-slate-950 shadow-lg transition-all hover:scale-105 hover:bg-cyan-50 hover:shadow-xl focus-ring">
-                <Link href="/contact">
-                  Contact {persona.label.split(" ")[0]}
-                  <ArrowRight className="h-4 w-4" />
-                </Link>
-              </Button>
+              <div className="flex flex-col sm:flex-row gap-3">
+                <Button asChild size="lg" className="bg-white text-slate-950 shadow-lg transition-all hover:scale-105 hover:bg-cyan-50 hover:shadow-xl focus-ring">
+                  <Link href="/contact">
+                    Contact Me
+                    <ArrowRight className="h-4 w-4" />
+                  </Link>
+                </Button>
+                <Button asChild size="lg" variant="outline" className="border-white/20 bg-white/10 text-white shadow-lg backdrop-blur-sm transition-all hover:scale-105 hover:bg-white/20 hover:shadow-xl">
+                  <Link href={persona.resumeFile} target="_blank">
+                    Download Resume
+                    <Download className="h-4 w-4" />
+                  </Link>
+                </Button>
+              </div>
             </div>
           </div>
         </div>

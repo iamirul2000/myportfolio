@@ -10,56 +10,56 @@ export function ProjectStats() {
 
   const stats = useMemo(() => {
     const projects = persona.projects;
-    const technologies = new Set<string>();
-    const companies = new Set<string>();
-
-    projects.forEach((project) => {
-      project.techStack.forEach((tech) => technologies.add(tech));
-    });
-
-    // Extract companies from project descriptions
-    const companyNames = [
-      "ABSS",
-      "Asian Business Software Solutions",
-      "Theta Edge Berhad",
-      "TrackerHero",
-    ];
-    companyNames.forEach((company) => companies.add(company));
+    const companyProjects = projects.filter(p => 
+      p.slug === 'financio' || 
+      p.slug === 'poslite' || 
+      p.slug === 'sakupay' ||
+      p.slug === 'pigrimpro' ||
+      p.slug === 'trackerhero'
+    );
+    const personalProjects = projects.filter(p => 
+      p.slug === 'moneyplan-budget-planner' || 
+      p.slug === 'workshopflow' ||
+      p.slug === 'restaurant-starter' ||
+      p.slug === 'clinic-booking'
+    );
+    
+    // Systems Worked On: 4 total career systems (POSLite, SakuPay, PilgrimPro, Financio)
+    // Production Systems: 2 went live (SakuPay, Financio)
+    const systemsWorkedOn = 4;
 
     return {
       totalProjects: projects.length,
-      featuredProjects: projects.filter((p) => p.featured).length,
-      technologies: technologies.size,
-      companies: companies.size,
-      yearsExperience: 3,
+      companyWork: companyProjects.length,
+      personalBuilds: personalProjects.length,
+      systemsWorkedOn: systemsWorkedOn,
     };
   }, [persona.projects]);
 
   const statItems = [
     {
-      label: "Total Projects",
+      label: "Projects",
       value: stats.totalProjects,
       icon: "📁",
-      description: "Completed projects",
+      description: "Total completed",
     },
     {
-      label: "Years Experience",
-      value: stats.yearsExperience,
-      icon: "⏱️",
-      description: "Professional work",
-      suffix: "+",
-    },
-    {
-      label: "Technologies",
-      value: stats.technologies,
-      icon: "⚡",
-      description: "Tools & frameworks",
-    },
-    {
-      label: "Companies",
-      value: stats.companies,
+      label: "Company Work",
+      value: stats.companyWork,
       icon: "🏢",
-      description: "Organizations",
+      description: "Production contributions",
+    },
+    {
+      label: "Personal Builds",
+      value: stats.personalBuilds,
+      icon: "⚡",
+      description: "Side projects",
+    },
+    {
+      label: "Systems Worked On",
+      value: stats.systemsWorkedOn,
+      icon: "🚀",
+      description: "Career total",
     },
   ];
 
@@ -76,7 +76,7 @@ export function ProjectStats() {
               <div className="relative space-y-2">
                 <div className="text-3xl">{stat.icon}</div>
                 <div className="text-3xl font-bold tracking-tight">
-                  <AnimatedCounter end={stat.value} suffix={stat.suffix} />
+                  <AnimatedCounter value={stat.value} suffix={stat.suffix || ""} />
                 </div>
                 <div className="text-sm font-medium">{stat.label}</div>
                 <div className="text-xs text-muted-foreground">

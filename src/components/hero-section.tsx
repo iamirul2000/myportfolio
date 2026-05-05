@@ -5,6 +5,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { TypewriterRole } from "@/components/typewriter-role";
+import { AnimatedCounter } from "@/components/animated-counter";
 import { getActivePersona, portfolioConfig } from "@/data/portfolio-config";
 
 const socialIcons = {
@@ -82,12 +83,19 @@ export function HeroSection() {
             </div>
             <p className="text-base leading-7 text-muted-foreground">{persona.shortBio}</p>
             <div className="grid gap-4 sm:grid-cols-3">
-              {persona.stats.map((stat) => (
-                <div key={stat.label} className="rounded-2xl border border-white/70 bg-white/70 p-4 backdrop-blur-xl dark:border-white/10 dark:bg-white/5">
-                  <p className="text-2xl font-semibold">{stat.value}</p>
-                  <p className="mt-1 text-sm text-muted-foreground">{stat.label}</p>
-                </div>
-              ))}
+              {persona.stats.map((stat) => {
+                const numericValue = parseInt(stat.value.replace(/[^0-9]/g, ''));
+                const suffix = stat.value.replace(/[0-9]/g, '');
+                
+                return (
+                  <div key={stat.label} className="rounded-2xl border border-white/70 bg-white/70 p-4 backdrop-blur-xl dark:border-white/10 dark:bg-white/5">
+                    <p className="text-2xl font-semibold">
+                      <AnimatedCounter value={numericValue} suffix={suffix} />
+                    </p>
+                    <p className="mt-1 text-sm text-muted-foreground">{stat.label}</p>
+                  </div>
+                );
+              })}
             </div>
           </div>
         </Card>

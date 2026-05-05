@@ -1,13 +1,15 @@
 import { PageHero } from "@/components/page-hero";
 import { Card } from "@/components/ui/card";
 import { GitHubStats } from "@/components/github-stats";
-import { SkillBars } from "@/components/skill-bars";
+import { SkillRadarChart } from "@/components/skill-radar-chart";
 import { ScrollAnimation } from "@/components/scroll-animations";
 import { AboutProfileCard } from "@/components/about-profile-card";
 import { QuickFacts } from "@/components/quick-facts";
 import { SkillsCategorized } from "@/components/skills-categorized";
 import { CurrentFocus } from "@/components/current-focus";
 import { WorkPhilosophy } from "@/components/work-philosophy";
+import { ServicesEnhanced } from "@/components/services-enhanced";
+import { FocusAreasCompact } from "@/components/focus-areas-compact";
 import { getActivePersona } from "@/data/portfolio-config";
 import { buildMetadata } from "@/lib/metadata";
 
@@ -24,8 +26,9 @@ export default function AboutPage() {
     <>
       <PageHero 
         eyebrow="About" 
-        title={`About ${persona.label}`} 
-        description={persona.shortBio} 
+        title="About Me" 
+        description="Full Stack Web Software Engineer building reliable, production-ready applications. I specialize in backend-heavy systems, REST APIs, and database-driven solutions using Laravel, PHP, MySQL, Angular, and Flutter. I focus on improving existing products, solving real-world problems, and delivering maintainable code that works."
+        aside={<FocusAreasCompact />}
       />
       
       <section className="pb-16">
@@ -47,6 +50,10 @@ export default function AboutPage() {
                 <QuickFacts />
               </ScrollAnimation>
 
+              <ScrollAnimation animation="fade-up" delay={150}>
+                <GitHubStats />
+              </ScrollAnimation>
+
               <ScrollAnimation animation="fade-up" delay={200}>
                 <WorkPhilosophy />
               </ScrollAnimation>
@@ -54,19 +61,6 @@ export default function AboutPage() {
 
             {/* Main Content */}
             <div className="space-y-6">
-              <ScrollAnimation animation="fade-up">
-                <Card className="card-spacing">
-                  <h2 className="text-2xl font-semibold">Engineering Summary</h2>
-                  <div className="mt-5 space-y-4">
-                    {persona.longBio.map((paragraph, index) => (
-                      <p key={index} className="text-sm leading-7 text-muted-foreground sm:text-base">
-                        {paragraph}
-                      </p>
-                    ))}
-                  </div>
-                </Card>
-              </ScrollAnimation>
-
               <ScrollAnimation animation="slide-right" delay={100}>
                 <SkillsCategorized />
               </ScrollAnimation>
@@ -75,8 +69,11 @@ export default function AboutPage() {
                 <CurrentFocus />
               </ScrollAnimation>
 
-              <ScrollAnimation animation="fade-up" delay={300}>
-                <GitHubStats />
+              <ScrollAnimation animation="fade-up" delay={250}>
+                <Card className="card-spacing" id="focus-areas">
+                  <h2 className="text-2xl font-semibold mb-6">Focus Areas</h2>
+                  <ServicesEnhanced services={persona.services} />
+                </Card>
               </ScrollAnimation>
             </div>
           </div>
@@ -84,7 +81,7 @@ export default function AboutPage() {
       </section>
 
       <ScrollAnimation animation="fade-up">
-        <SkillBars />
+        <SkillRadarChart />
       </ScrollAnimation>
     </>
   );

@@ -109,7 +109,7 @@ export function SiteFooter() {
 
               {/* Footer Navigation */}
               <div className="flex flex-wrap gap-x-6 gap-y-2 text-sm text-slate-400 pt-4 border-t border-slate-800">
-                {portfolioConfig.navigation.filter(item => item.href !== '/resume').map((item) => (
+                {portfolioConfig.navigation.map((item) => (
                   <Link key={item.href} href={item.href} className="hover:text-slate-200 transition-colors">
                     {item.label}
                   </Link>

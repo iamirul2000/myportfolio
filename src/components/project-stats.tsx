@@ -76,7 +76,7 @@ export function ProjectStats() {
               <div className="relative space-y-2">
                 <div className="text-3xl">{stat.icon}</div>
                 <div className="text-3xl font-bold tracking-tight">
-                  <AnimatedCounter value={stat.value} suffix={stat.suffix || ""} />
+                  <AnimatedCounter value={stat.value} />
                 </div>
                 <div className="text-sm font-medium">{stat.label}</div>
                 <div className="text-xs text-muted-foreground">

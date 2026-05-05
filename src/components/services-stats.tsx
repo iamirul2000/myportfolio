@@ -59,7 +59,7 @@ export function ServicesStats() {
           >
             <div className={`mb-3 ${stat.color}`}>{stat.icon}</div>
             <div className="mb-1 text-3xl font-bold">
-              <AnimatedCounter end={stat.value} suffix={stat.suffix} />
+              <AnimatedCounter value={stat.value} suffix={stat.suffix} />
             </div>
             <p className="text-sm text-muted-foreground">{stat.label}</p>
           </div>

@@ -509,8 +509,8 @@ const personalProjects: Project[] = [
     description: "A professional clinic booking and management system with patient appointments, doctor scheduling, service management, and admin dashboard for healthcare facilities.",
     techStack: ["Next.js", "Laravel", "MySQL", "TypeScript", "Tailwind CSS", "Docker"],
     tags: ["Healthcare", "Clinic Management", "Booking System", "Admin Dashboard"],
-    thumbnail: "/images/projects/clinic-booking-dashboard.png",
-    gallery: ["/images/projects/clinic-booking-dashboard.png"],
+    thumbnail: "/images/projects/clinicbooking.png",
+    gallery: ["/images/projects/clinicbooking.png"],
     links: [
       { label: "Try Demo", href: "/demo/clinic-booking" },
       { label: "Contact", href: "/contact" }

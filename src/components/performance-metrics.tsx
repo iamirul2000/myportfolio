@@ -81,7 +81,7 @@ export function PerformanceMetrics() {
               <div className="text-right">
                 <div className="flex items-baseline gap-1">
                   <AnimatedCounter
-                    end={metric.value}
+                    value={metric.value}
                     className="text-2xl font-bold"
                   />
                   <span className="text-xs text-muted-foreground">

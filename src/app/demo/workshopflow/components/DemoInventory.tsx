@@ -15,9 +15,18 @@ export default function DemoInventory() {
 
   return (
     <div className="space-y-6">
-      <div>
-        <h1 className="text-3xl font-bold text-gray-900">Inventory</h1>
-        <p className="text-gray-600">Manage parts and supplies</p>
+      <div className="flex items-center justify-between">
+        <div>
+          <h1 className="text-3xl font-bold text-gray-900">Inventory</h1>
+          <p className="text-gray-600">Manage parts and supplies</p>
+        </div>
+        <button 
+          onClick={() => alert('Add Item functionality - This is a demo. In production, this would open a form to add a new inventory item.')}
+          className="flex items-center gap-2 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700"
+        >
+          <Package size={18} />
+          Add Item
+        </button>
       </div>
 
       <div className="grid gap-4 md:grid-cols-3">

@@ -50,7 +50,7 @@ export function SkillProficiencyEnhanced() {
       <div className="container">
         <div className="mb-8 text-center">
           <h2 className="text-3xl font-bold">Technical Proficiency</h2>
-          <p className="mt-2 text-muted-foreground">
+          <p className="mt-2 text-muted-foreground mx-auto max-w-2xl text-center" style={{ textAlign: 'center !important' as any }}>
             Skills developed through hands-on project work
           </p>
         </div>

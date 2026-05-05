@@ -20,6 +20,13 @@ export default function DemoCustomers() {
           <h1 className="text-3xl font-bold text-gray-900">Customers</h1>
           <p className="text-gray-600">Manage customer information and history</p>
         </div>
+        <button 
+          onClick={() => alert('Add Customer functionality - This is a demo. In production, this would open a form to create a new customer.')}
+          className="flex items-center gap-2 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700"
+        >
+          <Users size={18} />
+          Add Customer
+        </button>
       </div>
 
       <div className="grid gap-4 md:grid-cols-3">

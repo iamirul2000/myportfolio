@@ -189,7 +189,7 @@ export function SkillRadarChart() {
       <div className="container">
         <div className="mb-8 text-center">
           <h2 className="text-3xl font-bold">Technical Proficiency</h2>
-          <p className="mt-2 text-muted-foreground">
+          <p className="mt-2 text-muted-foreground text-center">
             Skills developed through hands-on project work
           </p>
         </div>

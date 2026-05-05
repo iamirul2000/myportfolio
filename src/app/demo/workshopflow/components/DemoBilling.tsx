@@ -29,9 +29,18 @@ export default function DemoBilling() {
 
   return (
     <div className="space-y-6">
-      <div>
-        <h1 className="text-3xl font-bold text-gray-900">Billing & Invoices</h1>
-        <p className="text-gray-600">Manage payments and invoices</p>
+      <div className="flex items-center justify-between">
+        <div>
+          <h1 className="text-3xl font-bold text-gray-900">Billing & Invoices</h1>
+          <p className="text-gray-600">Manage payments and invoices</p>
+        </div>
+        <button 
+          onClick={() => alert('Create Invoice functionality - This is a demo. In production, this would open a form to create a new invoice.')}
+          className="flex items-center gap-2 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700"
+        >
+          <Receipt size={18} />
+          Create Invoice
+        </button>
       </div>
 
       <div className="grid gap-4 md:grid-cols-3">
